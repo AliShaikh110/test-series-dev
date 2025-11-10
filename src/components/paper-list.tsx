@@ -43,10 +43,10 @@ function openFullScreen() {
 
 const Paperlist = ({ examData }: Props) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 py-10 px-6">
-      <div className=" mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 py-6 px-6">
+      <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-8">
-          {examData.exam_name} Papers
+          {examData.exam_name} Test
         </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -78,11 +78,10 @@ const Paperlist = ({ examData }: Props) => {
                       <div className="mt-auto flex justify-between items-center">
                         <Badge
                           variant="outline"
-                          className={`rounded-full px-3 py-1 text-xs font-medium ${
-                            paper.papers_id.status === "published"
-                              ? "bg-green-100 text-green-800 dark:bg-green-800/10 dark:text-green-400"
-                              : "bg-yellow-100 text-yellow-800 dark:bg-yellow-800/10 dark:text-yellow-400"
-                          }`}
+                          className={`rounded-full px-3 py-1 text-xs font-medium ${paper.papers_id.status === "published"
+                            ? "bg-green-100 text-green-800 dark:bg-green-800/10 dark:text-green-400"
+                            : "bg-yellow-100 text-yellow-800 dark:bg-yellow-800/10 dark:text-yellow-400"
+                            }`}
                         >
                           {paper.papers_id.status}
                         </Badge>

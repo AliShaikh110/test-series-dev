@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Lock, Star, Search, Download, Filter, RefreshCw } from "lucide-react";
+import { Lock, Star, Search, Filter, RefreshCw } from "lucide-react";
 
 interface PYQData {
   id: string;
@@ -209,9 +209,9 @@ export default function PreviousYearPapers() {
                 <Button className="flex-1">
                   <Lock className="mr-2 h-4 w-4" /> Attempt Online
                 </Button>
-                <Button variant="outline" className="flex-1">
+                {/* <Button variant="outline" className="flex-1">
                   <Download className="mr-2 h-4 w-4" /> Download PDF
-                </Button>
+                </Button> */}
               </CardFooter>
             </Card>
           ))}
