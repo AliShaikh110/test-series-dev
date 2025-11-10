@@ -24,45 +24,49 @@ import ThemeBtn from "@/components/ui/ThemeBtn";
 
 const examCategories = [
   {
-    title: "SSC & Govt",
+    title: "Engineering",
     icon: Building2,
     links: [
-      "SSC CGL",
-      "SSC CHSL",
-      "SSC GD",
-      "SSC CPO",
-      "SSC MTS",
-      "View all SSC →",
+      "JEE Mains",
+      "JEE Advanced",
+      "PERA CET",
+      "MHCET",
+      "AEEE",
+      "View all Engineering →",
     ],
   },
   {
-    title: "Banking & Insurance",
+    title: "Management",
     icon: Landmark,
     links: [
-      "SBI PO",
-      "SBI Clerk",
-      "IBPS PO",
-      "IBPS Clerk",
-      "RBI",
-      "LIC",
-      "View all Banking →",
+      "CAT",
+      "XAT",
+      "CMAT",
+      "MAT",
+      "IBSAT",
+      "SNAP",
+      "NMAT",
+      "View all Management →",
     ],
   },
   {
-    title: "Railways",
+    title: "Medical",
     icon: Train,
     links: [
-      "RRB NTPC",
-      "RRB Group D",
-      "RRB JE",
-      "RRB ALP",
-      "View all Railways →",
+      "NEET",
+      "NEET PG",
+      "NEET SS",
+      "INI-CET",
+      "FMGE",
+      "NBE FET",
+      "DNB PDCET",
+      "View all Medicals →",
     ],
   },
   {
-    title: "Teaching",
+    title: "Technology",
     icon: GraduationCap,
-    links: ["CTET", "State TET", "KVS", "NVS", "DSSSB", "View all Teaching →"],
+    links: ["Pandashiksha", "Git", "Typescript", "Django", "Vue", "View all Technology →"],
   },
   {
     title: "Civil Services & Judiciary",
@@ -75,11 +79,11 @@ const examCategories = [
       "View all Civil →",
     ],
   },
-  {
-    title: "MBA & Management",
-    icon: Briefcase,
-    links: ["CAT", "XAT", "NMAT", "SNAP", "MAT", "View all MBA →"],
-  },
+  // {
+  //   title: "MBA & Management",
+  //   icon: Briefcase,
+  //   links: ["CAT", "XAT", "NMAT", "SNAP", "MAT", "View all MBA →"],
+  // },
   {
     title: "CUET & UG",
     icon: BookMarked,
@@ -121,13 +125,10 @@ export function HeaderContent() {
   return (
     <>
       <motion.header
-        className="sticky top-0 z-40 transition-all duration-300 w-full backdrop-blur-md"
+        className="fixed top-0 z-40 transition-all duration-300 w-full backdrop-blur-md bg-white"
         style={{
-          backgroundColor: isScrolled
-            ? "rgba(255, 255, 255, 0.95)"
-            : "var(--color-surface)",
-          borderBottom: `1px solid ${
-            isScrolled ? "rgba(209, 213, 219, 0.3)" : "var(--color-border)"
+          // backgroundColor: "rgba(255, 255, 255, 0.95)",
+          borderBottom: `1px solid ${"rgba(209, 213, 219, 0.3)"
           }`,
         }}
         animate={{
