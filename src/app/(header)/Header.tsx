@@ -55,10 +55,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 h-18 transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 h-18 transition-transform duration-300 bg-white ${
         visible ? "translate-y-0" : "-translate-y-full"
       } ${elevated ? "shadow-sm" : "shadow-none"} 
-        bg-white backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:bg-neutral-900/70`}
+        bg-white backdrop-blur dark:bg-neutral-900/70`}
     >
       <HeaderContent />
     </header>
