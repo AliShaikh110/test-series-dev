@@ -1,0 +1,834 @@
+{
+    "streams": [
+      {
+        "name": "Engineering",
+        "icon": "⚙️",
+        "link": "/engineering",
+        "colleges": {
+          "categories": [
+           
+            {
+              "name": "Private Engineering Colleges",
+              "link": "/university-list/engineering?ownership=Private"
+            },
+            {
+              "name": "Government Engineering Colleges",
+              "link": "/university-list/engineering?ownership=government"
+            },
+            {
+              "name": "Engineering Colleges in Mumbai",
+              "link": "/university-list/engineering?city=mumbai"
+            },
+            {
+              "name": "Engineering Colleges in Pune",
+              "link": "/university-list/engineering?city=pune"
+            },
+            {
+              "name": "Engineering Colleges in Hyderabad",
+              "link": "/university-list/engineering?city=hyderabad"
+            }
+          ],
+          "courses": [
+            {
+              "name": "B.Tech - Computer Science",
+              "link": "/study/course/b-tech-in-computer-science"
+            },
+            {
+              "name": "B.Tech - Aerospace Engineering",
+              "link": "/study/course/b-tech-aerospace-engineering"
+            },
+            {
+              "name": "B.Tech - Chemical Engineering",
+              "link": "/study/course/b-tech-chemical-engineering"
+            },
+            {
+              "name": "B.Tech - Civil Engineering",
+              "link": "/study/course/b-tech-civil-engineering"
+            },
+            {
+              "name": "M.Tech - Computer Science",
+              "link": "/study/course/m-tech-computer-science"
+            },
+            {
+              "name": "M.Tech - Data Science",
+              "link": "/study/course/m-tech-data-science"
+            }
+          ],
+          "exams": [
+            {
+              "name": "JEE Advanced",
+              "link": "/study/exam/jee-advanced-joint-entrance-exam-advanced"
+            },
+            {
+              "name": "JEE Main",
+              "link": "/study/exam/jee-main-joint-entrance-examination-main"
+            },
+            {
+              "name": "AEEE",
+              "link": "/study/exam/aaeee-avinashilingam-engineering-entrance-examination"
+            },
+            {
+              "name": "KRLMPCA CET",
+              "link": "/study/exam/krlmpca-cet-karnataka-religious-and-linguistic-minority-professional-colleges-association-common-entrance-test"
+            },
+            {
+              "name": "JET - Jain Entrance Test",
+              "link": "/study/exam/jet-jain-entrance-test"
+            },
+            {
+              "name": "TS PGECET",
+              "link": "/study/exam/ts-pgecet-telangana-state-post-graduate-engineering-common-entrance-test"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Medical",
+        "icon": "🏥",
+        "link": "/medical",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Private Medical Colleges",
+              "link": "/university-list/medical?ownership=Private"
+            },
+            {
+              "name": "Government Medical Colleges",
+              "link": "/university-list/medical?ownership=Government"
+            },
+            {
+              "name": "Medical Colleges in Mumbai",
+              "link": "/university-list/medical?city=mumbai"
+            },
+            {
+              "name": "Medical Colleges in Pune",
+              "link": "/university-list/medical?city=pune"
+            },
+            {
+              "name": "Medical Colleges in Hyderabad",
+              "link": "/university-list/medical?city=hyderabad"
+            }
+          ],
+          "courses": [
+            {
+              "name": "MBBS",
+              "link": "/study/course/bachelor-of-medicine-bachelor-of-surgery-mbbs"
+            },
+            {
+              "name": "BAMS",
+              "link": "/study/course/bachelor-of-ayurveda-medical-and-surgery"
+            },
+            {
+              "name": "Doctorate of Medicine",
+              "link": "/study/course/doctorate-of-medicine"
+            },
+            {
+              "name": "Bachelor of Dental Surgery",
+              "link": "/study/course/bachelor-of-dental-surgery"
+            },
+            {
+              "name": "Master of Dental Surgery",
+              "link": "/study/course/master-of-dental-surgery"
+            },
+            {
+              "name": "General Nursing and Midwifery",
+              "link": "/study/course/general-nursing-and-midwifery"
+            }
+          ],
+          "exams": [
+            {
+              "name": "NEET",
+              "link": "/study/exam/neet-national-eligibility-cum-entrance-test"
+            },
+            {
+              "name": "NEET MDS",
+              "link": "/study/exam/neet-mds-national-eligibility-cum-entrance-test-for-mds"
+            },
+            {
+              "name": "NEET PG",
+              "link": "/study/exam/neet-pg-national-eligibility-cum-entrance-test-for-post-graduate"
+            },
+            {
+              "name": "NEET SS",
+              "link": "/study/exam/neet-ss-national-eligibility-cum-entrance-test-super-specialty"
+            },
+            {
+              "name": "AIIMS NURSING",
+              "link": "/study/exam/aiims-nursing-all-india-institute-of-medical-sciences-nursing"
+            },
+            {
+              "name": "NILD CET",
+              "link": "/study/exam/nild-cet-national-institute-for-locomotor-disabilities-common-entrance-test"
+            }
+          ]
+        }
+      },
+      {
+        "name": "MBA",
+        "icon": "📊",
+        "link": "/management",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Private MBA Colleges",
+              "link": "/university-list/management?ownership=Private"
+            },
+            {
+              "name": "Government MBA Colleges",
+              "link": "/university-list/management?ownership=Government"
+            },
+            {
+              "name": "MBA Colleges in Mumbai",
+              "link": "/university-list/management?city=mumbai"
+            },
+            {
+              "name": "MBA Colleges in Pune",
+              "link": "/university-list/management?city=pune"
+            },
+            {
+              "name": "MBA Colleges in Hyderabad",
+              "link": "/university-list/management?city=hyderabad"
+            }
+          ],
+          "courses": [
+            {
+              "name": "Executive PGDM",
+              "link": "/study/course/executive-pgdm"
+            },
+            {
+              "name": "MBA - Risk Management",
+              "link": "/study/course/mba-risk-management"
+            },
+            {
+              "name": "MBA - Operation Management",
+              "link": "/study/course/mba-operations-management"
+            },
+            {
+              "name": "MBA - Finance Management",
+              "link": "/study/course/mba-finance-management"
+            },
+            {
+              "name": "BBA in Tourism Management",
+              "link": "/study/course/bba-in-tourism-management"
+            },
+            {
+              "name": "MBA - Actuarial Science",
+              "link": "/study/course/mba-actuarial-science"
+            }
+          ],
+          "exams": [
+            {
+              "name": "CAT - Common Admission Test",
+              "link": "/study/exam/cat-common-admission-test"
+            },
+            {
+              "name": "MAH MBA-CET",
+              "link": "/study/exam/mah-mba-cet-maharashtra-mba-common-entrance-test"
+            },
+            {
+              "name": "SNAP",
+              "link": "/study/exam/snap-symbiosis-national-aptitude-test"
+            },
+            {
+              "name": "CMAT",
+              "link": "/study/exam/cmat-common-management-admission-test"
+            },
+            {
+              "name": "IBSAT",
+              "link": "/study/exam/ibsat-ibs-aptitude-test"
+            },
+            {
+              "name": "NMAT",
+              "link": "/study/exam/nmat-nmat-by-gmac"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Design",
+        "icon": "✏️",
+        "link": "/design",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Private Design Colleges",
+              "link": "/university-list/design?ownership=Private"
+            },
+            {
+              "name": "Government Design Colleges",
+              "link": "/university-list/design?ownership=Government"
+            },
+            {
+              "name": "Design Colleges in Mumbai",
+              "link": "/university-list/design?city=mumbai"
+            },
+            {
+              "name": "Design Colleges in Pune",
+              "link": "/university-list/design?city=pune"
+            },
+            {
+              "name": "Design Colleges in Hyderabad",
+              "link": "/university-list/design?city=hyderabad"
+            }
+          ],
+          "courses": [
+            {
+              "name": "Bachelor of Design",
+              "link": "/study/course/bachelor-of-design"
+            },
+            {
+              "name": "B.Sc Game Designing and Development",
+              "link": "/study/course/b-sc-game-designing-and-development"
+            },
+            {
+              "name": "MBA in Interior Design",
+              "link": "/study/course/mba-in-interior-design"
+            },
+            {
+              "name": "Ceramic Design",
+              "link": "/study/course/ceramic-design"
+            },
+            {
+              "name": "BA in Graphic Design",
+              "link": "/study/course/ba-in-graphic-design"
+            },
+            {
+              "name": "Landscape Design",
+              "link": "/study/course/landscape-design"
+            }
+          ],
+          "exams": [
+            {
+              "name": "AIEED",
+              "link": "/study/exam/aieed-all-india-entrance-examination-for-design"
+            },
+            {
+              "name": "NIFT Entrance Exam",
+              "link": "/study/exam/nift-entrance-exam-national-institute-of-fashion-technology-entrance-examination"
+            },
+            {
+              "name": "IICD Entrance Test",
+              "link": "/study/exam/iicd-entrance-test-indian-institute-of-crafts-and-design-entrance-test"
+            },
+            {
+              "name": "CEED",
+              "link": "/study/exam/ceed-common-entrance-examination-for-design"
+            },
+            {
+              "name": "UPESDAT",
+              "link": "/study/exam/upesdat-upes-design-aptitude-test"
+            },
+            {
+              "name": "SMEAT",
+              "link": "/study/exam/smeat-srishti-manipal-entrance-and-aptitude-test"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Law",
+        "icon": "⚖️",
+        "link": "/law",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Private Law Colleges",
+              "link": "/university-list/law?ownership=Private"
+            },
+            {
+              "name": "Government Law Colleges",
+              "link": "/university-list/law?ownership=Government"
+            },
+            {
+              "name": "Law Colleges in Mumbai",
+              "link": "/university-list/law?city=mumbai"
+            },
+            {
+              "name": "Law Colleges in Pune",
+              "link": "/university-list/law?city=pune"
+            },
+            {
+              "name": "Law Colleges in Hyderabad",
+              "link": "/university-list/law?city=hyderabad"
+            }
+          ],
+          "courses": [
+            {
+              "name": "Corporate Law",
+              "link": "/study/course/corporate-law"
+            },
+            {
+              "name": "Environmental Law",
+              "link": "/study/course/environmental-law"
+            },
+            {
+              "name": "Maritime Law",
+              "link": "/study/course/maritime-law"
+            },
+            {
+              "name": "MBA in Business Law",
+              "link": "/study/course/mba-in-business-law"
+            },
+            {
+              "name": "Energy Law",
+              "link": "/study/course/energy-law"
+            },
+            {
+              "name": "Post Graduate Diploma in Corporate Law",
+              "link": "/study/course/post-graduate-diploma-in-corporate-law"
+            }
+          ],
+          "exams": [
+            {
+              "name": "CLAT",
+              "link": "/study/exam/clat-common-law-admission-test-1"
+            },
+            {
+              "name": "NMIMS-LAT",
+              "link": "/study/exam/nmims-lat-nmims-law-aptitude-test-1"
+            },
+            {
+              "name": "AP LAWCET",
+              "link": "/study/exam/ap-lawcet-andhra-pradesh-law-common-entrance-test-1"
+            },
+            {
+              "name": "AIL LET",
+              "link": "/study/exam/ail-let-army-institute-of-law-entrance-test-1"
+            },
+            {
+              "name": "AILET PG",
+              "link": "/study/exam/ailet-pg-all-india-law-entrance-test-for-llm-1"
+            },
+            {
+              "name": "AIBE",
+              "link": "/study/exam/aibe-all-india-bar-examination-1"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pharmacy",
+        "icon": "💊",
+        "link": "/pharmacy",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Private Pharmacy Colleges",
+              "link": "/university-list/pharmacy?ownership=Private"
+            },
+            {
+              "name": "Government Pharmacy Colleges",
+              "link": "/university-list/pharmacy?ownership=Government"
+            },
+            {
+              "name": "Pharmacy Colleges in Mumbai",
+              "link": "/university-list/pharmacy?city=mumbai"
+            },
+            {
+              "name": "Pharmacy Colleges in Pune",
+              "link": "/university-list/pharmacy?city=pune"
+            },
+            {
+              "name": "Pharmacy Colleges in Hyderabad",
+              "link": "/university-list/pharmacy?city=hyderabad"
+            }
+          ],
+          "courses": [
+            {
+              "name": "M.Pharm in Pharmaceutics",
+              "link": "/study/course/m-pharm-in-pharmaceutics"
+            },
+            {
+              "name": "M.Pharm in Pharmacognosy",
+              "link": "/study/course/m-pharm-in-pharmacognosy"
+            },
+            {
+              "name": "Diploma in Nursing Care Assistant",
+              "link": "/study/course/diploma-in-nursing-care-assistant"
+            },
+            {
+              "name": "Diploma in Naturopathy",
+              "link": "/study/course/diploma-in-naturopathy"
+            },
+            {
+              "name": "M.Pharm Industrial Pharmacy",
+              "link": "/study/course/m-pharm-industrial-pharmacy"
+            },
+            {
+              "name": "M.Pharm in Clinical Practice and Research",
+              "link": "/study/course/m-pharm-in-clinical-practice-and-research"
+            }
+          ],
+          "exams": [
+            {
+              "name": "NIPER JEE",
+              "link": "/study/exam/niper-jee-national-institute-of-pharmaceutical-education-and-research-joint-entrance-exam"
+            },
+            {
+              "name": "KAHER-AIET",
+              "link": "/study/exam/kaher-aiet-kle-academy-of-higher-education-and-research-all-india-entrance-test"
+            },
+            {
+              "name": "GPAT",
+              "link": "/study/exam/gpat-graduate-pharmacy-aptitude-test"
+            },
+            {
+              "name": "CG PPHT",
+              "link": "/study/exam/cg-ppht-chhattisgarh-pre-pharmacy-test"
+            },
+            {
+              "name": "UPESPAT",
+              "link": "/study/exam/upespat-university-of-petroleum-energy-studies-pharma-aptitude-test"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Finance",
+        "icon": "💵",
+        "link": "/finanace",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Private Finance Colleges",
+              "link": "/university-list/finance?ownership=Private"
+            },
+            {
+              "name": "Government Finance Colleges",
+              "link": "/university-list/finance?ownership=Government"
+            },
+            {
+              "name": "Finance Colleges in Mumbai",
+              "link": "/university-list/finance?city=mumbai"
+            },
+            {
+              "name": "Finance Colleges in Pune",
+              "link": "/university-list/finance?city=pune"
+            },
+            {
+              "name": "Finance Colleges in Hyderabad",
+              "link": "/university-list/finance?city=hyderabad"
+            }
+          ],
+          "courses": [
+            {
+              "name": "Bachelor of Financial Markets",
+              "link": "/study/course/bachelor-of-financial-markets"
+            },
+            {
+              "name": "Bachelor of Education",
+              "link": "/study/course/bachelor-of-education"
+            },
+            {
+              "name": "BBA in Tourism Management",
+              "link": "/study/course/bba-in-tourism-management"
+            },
+            {
+              "name": "BBA in Event Management",
+              "link": "/study/course/bba-in-event-management"
+            },
+            {
+              "name": "BBA in Finance",
+              "link": "/study/course/bba-in-finance"
+            },
+            {
+              "name": "BBA in Marketing",
+              "link": "/study/course/bba-in-marketing"
+            }
+          ],
+          "exams": [
+            {
+              "name": "CA Intermediate Exam",
+              "link": "/study/exam/ca-intermediate-exam"
+            },
+            {
+              "name": "CA Final Exam",
+              "link": "/study/exam/ca-final-exam"
+            },
+            {
+              "name": "CS Executive Exam",
+              "link": "/study/exam/cs-executive-exam"
+            },
+            {
+              "name": "CMA Final",
+              "link": "/study/exam/cma-final"
+            },
+            {
+              "name": "CMA Foundation",
+              "link": "/study/exam/cma-foundation"
+            },
+            {
+              "name": "CS Professional Exam",
+              "link": "/study/exam/cs-professional-exam"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Information Technology",
+        "icon": "💻",
+        "link": "/information-technology",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Private Information Technology Colleges",
+              "link": "/university-list/information-technology?ownership=Private"
+            },
+            {
+              "name": "Government Information Technology Colleges",
+              "link": "/university-list/information-technology?ownership=Government"
+            },
+            {
+              "name": "Information Technology Colleges in Mumbai",
+              "link": "/university-list/information-technology?city=mumbai"
+            },
+            {
+              "name": "Information Technology Colleges in Pune",
+              "link": "/university-list/information-technology?city=pune"
+            },
+            {
+              "name": "Information Technology Colleges in Hyderabad",
+              "link": "/university-list/information-technology?city=hyderabad"
+            }
+          ],
+          "courses": [
+            {
+              "name": "Bachelor of Technology",
+              "link": "/study/course/bachelor-of-technology"
+            },
+            {
+              "name": "Masters of Computer Management",
+              "link": "/study/course/masters-of-computer-management"
+            },
+            {
+              "name": "ITI Course/Trade in Mechanic Motor Vehicle",
+              "link": "/study/course/iti-course-trade-in-mechanic-motor-vehicle"
+            },
+            {
+              "name": "ITI Course/Trade in Fitter",
+              "link": "/study/course/iti-course-trade-in-fitter"
+            },
+            {
+              "name": "ITI Course in Diesel Mechanic",
+              "link": "/study/course/iti-course-in-diesel-mechanic"
+            },
+            {
+              "name": "ITI Course in Pump Operator cum Mechanic",
+              "link": "/study/course/iti-course-in-pump-operator-cum-mechanic"
+            }
+          ],
+          "exams": [
+            {
+              "name": "MAH MCA CET",
+              "link": "/study/exam/mah-mca-cet-maharashtra-mca-common-entrance-test"
+            },
+            {
+              "name": "CG Pre MCA",
+              "link": "/study/exam/cg-pre-mca-chhattisgarh-pre-mca"
+            },
+            {
+              "name": "NIMCET",
+              "link": "/study/exam/nimcet-national-institute-of-technology-master-of-computer-applications-common-entrance-test"
+            },
+            {
+              "name": "Assam JMEE",
+              "link": "/study/exam/assam-jmee-assam-joint-mca-entrance-examination"
+            },
+            {
+              "name": "C-CAT",
+              "link": "/study/exam/c-cat-c-dac-s-computerized-common-admission-test"
+            },
+            {
+              "name": "WB JECA",
+              "link": "/study/exam/wb-jeca-west-bengal-joint-examination-for-masters-in-computer-applications"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Media",
+        "icon": "🎥",
+        "link": "/media",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Private Media Colleges",
+              "link": "/university-list/media?ownership=Private"
+            },
+            {
+              "name": "Government Media Colleges",
+              "link": "/university-list/media?ownership=Government"
+            },
+            {
+              "name": "Media Colleges in Mumbai",
+              "link": "/university-list/media?city=mumbai"
+            },
+            {
+              "name": "Media Colleges in Pune",
+              "link": "/university-list/media?city=pune"
+            },
+            {
+              "name": "Media Colleges in Hyderabad",
+              "link": "/university-list/media?city=hyderabad"
+            }
+          ],
+          "courses": [
+            {
+              "name": "Fashion Communication",
+              "link": "/study/course/fashion-communication"
+            },
+            {
+              "name": "Fashion Illustration",
+              "link": "/study/course/fashion-illustration"
+            },
+            {
+              "name": "Diploma in Broadcast Journalism",
+              "link": "/study/course/diploma-in-broadcast-journalism"
+            },
+            {
+              "name": "Diploma in Journalism and Mass Communication",
+              "link": "/study/course/diploma-in-journalism-and-mass-communication"
+            },
+            {
+              "name": "Bachelors in Media Animation & Design",
+              "link": "/study/course/bachelors-in-media-animation-design"
+            },
+            {
+              "name": "Master of Arts in Convergent Journalism",
+              "link": "/study/course/master-of-arts-in-convergent-journalism"
+            }
+          ],
+          "exams": [
+            {
+              "name": "JET Exam",
+              "link": "/study/exam/jet-exam-joint-entrance-test"
+            },
+            {
+              "name": "IIMC Entrance Exam",
+              "link": "/study/exam/iimc-entrance-exam-indian-institute-of-mass-communication-entrance-examination"
+            },
+            {
+              "name": "ACJ Entrance Exam",
+              "link": "/study/exam/acj-entrance-exam-asian-college-of-journalism-entrance-examination"
+            },
+            {
+              "name": "GMCET",
+              "link": "/study/exam/gmcet-global-media-common-entrance-test"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Science",
+        "icon": "🔬",
+        "link": "/science",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Private Science Colleges",
+              "link": "/university-list/science?ownership=Private"
+            },
+            {
+              "name": "Government Science Colleges",
+              "link": "/university-list/science?ownership=Government"
+            },
+            {
+              "name": "Science Colleges in Mumbai",
+              "link": "/university-list/science?city=mumbai"
+            },
+            {
+              "name": "Science Colleges in Pune",
+              "link": "/university-list/science?city=pune"
+            },
+            {
+              "name": "Science Colleges in Hyderabad",
+              "link": "/university-list/science?city=hyderabad"
+            }
+          ],
+          "courses": [
+            {
+              "name": "BSc Chemistry",
+              "link": "/study/course-list/bsc-chemistry"
+            },
+            {
+              "name": "BSc Nautical Science",
+              "link": "/study/course-list/bsc-in-nautical-science"
+            },
+            {
+              "name": "BSc(Hons) in Physics",
+              "link": "/study/course-list/bsc-hons-in-physics"
+            },
+            {
+              "name": "BSc Mathematics",
+              "link": "/study/course-list/b-sc-mathematics"
+            },
+            {
+              "name": "MSc in Microbiology",
+              "link": "/study/course-list/msc-in-microbiology"
+            },
+          {
+            "name": "MSc Botany",
+            "link": "/study/course-list/m-sc-botany"
+          }
+        ],
+          "exams": []
+        }
+      },
+      {
+        "name": "Arts",
+        "icon": "🎨",
+        "link": "/arts",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Private Arts Colleges",
+              "link": "/university-list/arts?ownership=Private"
+            },
+            {
+              "name": "Government Arts Colleges",
+              "link": "/university-list/arts?ownership=Government"
+            },
+            {
+              "name": "Arts Colleges in Mumbai",
+              "link": "/university-list/arts?city=mumbai"
+            },
+            {
+              "name": "Arts Colleges in Pune",
+              "link": "/university-list/arts?city=pune"
+            },
+            {
+              "name": "Arts Colleges in Hyderabad",
+              "link": "/university-list/arts?city=hyderabad"
+            }
+          ],
+          "courses": [
+            {
+              "name": "B.A. Political Science",
+              "link": "/study/course-list/b-a-political-science"
+            },
+            {
+              "name": "B.A. Hons Economics",
+              "link": "/study/course-list/ba-hons-economics"
+            },
+            {
+            "name": "Master of Arts",
+            "link": "/study/course-list/master-of-arts"
+          },
+          {
+            "name": "Master of Fine Arts",
+            "link": "/study/course-list/master-of-fine-arts"
+          },
+          {
+            "name": "M.A. Economics",
+            "link": "/study/course-list/master-of-arts"
+          },
+          {
+            "name": "M.A. Political Science",
+            "link": "/study/course-list/m-a-political-science"
+          }
+        ],
+          "exams": []
+        }
+      }
+    ]
+  }

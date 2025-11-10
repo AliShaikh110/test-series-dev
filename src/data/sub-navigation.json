@@ -1,0 +1,600 @@
+{
+    "streams": [
+      {
+        "name": "Engineering",
+        "slug":"engineering",
+        "icon": "⚙️",
+        "link": "/university-list/engineering",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Maharashtra",
+              "link": "/university-list/engineering?state=maharashtra"
+            },
+            {
+              "name": "Delhi",
+              "link": "/university-list/engineering?state=delhi"
+            },
+            {
+              "name": "Uttar Pradesh",
+              "link": "/university-list/engineering?state=uttar-pradesh"
+            },
+            {
+              "name": "Tamil Nadu",
+              "link": "/university-list/engineering?state=tamil-nadu"
+            },
+            {
+              "name": "Rajasthan",
+              "link": "/university-list/engineering?state=rajasthan"
+            },
+            {
+              "name": "Andhra Pradesh",
+              "link": "/university-list/engineering?state=andhra-pradesh"
+            }
+          ],
+          "courses": [
+            {
+              "name": "B.Tech - Computer Science",
+              "link": "/study/course/b-tech-in-computer-science"
+            },
+            {
+              "name": "B.Tech - Aerospace Engineering",
+              "link": "/study/course/b-tech-aerospace-engineering"
+            },
+            {
+              "name": "B.Tech - Chemical Engineering",
+              "link": "/study/course/b-tech-chemical-engineering"
+            },
+            {
+              "name": "B.Tech - Civil Engineering",
+              "link": "/study/course/b-tech-civil-engineering"
+            },
+            {
+              "name": "M.Tech - Computer Science",
+              "link": "/study/course/m-tech-computer-science"
+            },
+            {
+              "name": "M.Tech - Data Science",
+              "link": "/study/course/m-tech-data-science"
+            }
+          ],
+          "exams": [
+            {
+              "name": "JEE Advanced",
+              "link": "/study/exam/jee-advanced-joint-entrance-exam-advanced"
+            },
+            {
+              "name": "JEE Main",
+              "link": "/study/exam/jee-main-joint-entrance-examination-main"
+            },
+            {
+              "name": "AEEE",
+              "link": "/study/exam/aaeee-avinashilingam-engineering-entrance-examination"
+            },
+            {
+              "name": "KRLMPCA CET",
+              "link": "/study/exam/krlmpca-cet-karnataka-religious-and-linguistic-minority-professional-colleges-association-common-entrance-test"
+            },
+            {
+              "name": "JET - Jain Entrance Test",
+              "link": "/study/exam/jet-jain-entrance-test"
+            },
+            {
+              "name": "TS PGECET",
+              "link": "/study/exam/ts-pgecet-telangana-state-post-graduate-engineering-common-entrance-test"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Medical",
+        "slug":"medical",
+        "icon": "🩺",
+        "link": "/university-list/medical",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Maharashtra",
+              "link": "/university-list/medical?state=maharashtra"
+            },
+            {
+              "name": "Delhi",
+              "link": "/university-list/medical?state=delhi"
+            },
+            {
+              "name": "Uttar Pradesh",
+              "link": "/university-list/medical?state=uttar-pradesh"
+            },
+            {
+              "name": "Tamil Nadu",
+              "link": "/university-list/medical?state=tamil-nadu"
+            },
+            {
+              "name": "Rajasthan",
+              "link": "/university-list/medical?state=rajasthan"
+            },
+            {
+              "name": "Andhra Pradesh",
+              "link": "/university-list/medical?state=andhra-pradesh"
+            }
+          ],
+          "courses": [
+            {
+              "name": "MBBS",
+              "link": "/study/course/bachelor-of-medicine-bachelor-of-surgery-mbbs"
+            },
+            {
+              "name": "BAMS",
+              "link": "/study/course/bachelor-of-ayurveda-medical-and-surgery"
+            },
+            {
+              "name": "Doctorate of Medicine",
+              "link": "/study/course/doctorate-of-medicine"
+            },
+            {
+              "name": "Bachelor of Dental Surgery",
+              "link": "/study/course/bachelor-of-dental-surgery"
+            },
+            {
+              "name": "Master of Dental Surgery",
+              "link": "/study/course/master-of-dental-surgery"
+            },
+            {
+              "name": "General Nursing and Midwifery",
+              "link": "/study/course/general-nursing-and-midwifery"
+            }
+          ],
+          "exams": [
+            {
+              "name": "NEET",
+              "link": "/study/exam/neet-national-eligibility-cum-entrance-test"
+            },
+            {
+              "name": "NEET MDS",
+              "link": "/study/exam/neet-mds-national-eligibility-cum-entrance-test-for-mds"
+            },
+            {
+              "name": "NEET PG",
+              "link": "/study/exam/neet-pg-national-eligibility-cum-entrance-test-for-post-graduate"
+            },
+            {
+              "name": "NEET SS",
+              "link": "/study/exam/neet-ss-national-eligibility-cum-entrance-test-super-specialty"
+            },
+            {
+              "name": "AIIMS NURSING",
+              "link": "/study/exam/aiims-nursing-all-india-institute-of-medical-sciences-nursing"
+            },
+            {
+              "name": "NILD CET",
+              "link": "/study/exam/nild-cet-national-institute-for-locomotor-disabilities-common-entrance-test"
+            }
+          ]
+        }
+      },
+      {
+        "name": "MBA",
+        "slug":"management",
+        "icon": "📊",
+        "link": "/university-list/management",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Maharashtra",
+              "link": "/university-list/management?state=maharashtra"
+            },
+            {
+              "name": "Delhi",
+              "link": "/university-list/management?state=delhi"
+            },
+            {
+              "name": "Uttar Pradesh",
+              "link": "/university-list/management?state=uttar-pradesh"
+            },
+            {
+              "name": "Tamil Nadu",
+              "link": "/university-list/management?state=tamil-nadu"
+            },
+            {
+              "name": "Rajasthan",
+              "link": "/university-list/management?state=rajasthan"
+            },
+            {
+              "name": "Andhra Pradesh",
+              "link": "/university-list/management?state=andhra-pradesh"
+            }
+          ],
+          "cities": [
+            {
+              "name": "Mumbai",
+              "link": "/university-list/management?city=mumbai"
+            },
+            {
+              "name": "Ahmedabad",
+              "link": "/university-list/management?city=ahmedabad"
+            },
+            {
+              "name": "Hyderabad",
+              "link": "/university-list/management?city=hyderabad"
+            },
+            {
+              "name": "Pune",
+              "link": "/university-list/management?city=pune"
+            },
+            {
+              "name": "Chennai",
+              "link": "/university-list/management?city=chennai"
+            }
+          ],
+          "courses": [
+            {
+              "name": "Executive PGDM",
+              "link": "/study/course/executive-pgdm"
+            },
+            {
+              "name": "MBA - Risk Management",
+              "link": "/study/course/mba-risk-management"
+            },
+            {
+              "name": "MBA - Operation Management",
+              "link": "/study/course/mba-operations-management"
+            },
+            {
+              "name": "MBA - Finance Management",
+              "link": "/study/course/mba-finance-management"
+            },
+            {
+              "name": "BBA in Tourism Management",
+              "link": "/study/course/bba-in-tourism-management"
+            },
+            {
+              "name": "MBA - Actuarial Science",
+              "link": "/study/course/mba-actuarial-science"
+            }
+          ],
+          "exams": [
+            {
+              "name": "CAT - Common Admission Test",
+              "link": "/study/exam/cat-common-admission-test"
+            },
+            {
+              "name": "MAH MBA-CET",
+              "link": "/study/exam/mah-mba-cet-maharashtra-mba-common-entrance-test"
+            },
+            {
+              "name": "SNAP",
+              "link": "/study/exam/snap-symbiosis-national-aptitude-test"
+            },
+            {
+              "name": "CMAT",
+              "link": "/study/exam/cmat-common-management-admission-test"
+            },
+            {
+              "name": "IBSAT",
+              "link": "/study/exam/ibsat-ibs-aptitude-test"
+            },
+            {
+              "name": "NMAT",
+              "link": "/study/exam/nmat-nmat-by-gmac"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Design",
+        "slug":"design",
+        "icon": "✏️",
+        "link": "/university-list/design",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Maharashtra",
+              "link": "/university-list/design?state=maharashtra"
+            },
+            {
+              "name": "Delhi",
+              "link": "/university-list/design?state=delhi"
+            },
+            {
+              "name": "Uttar Pradesh",
+              "link": "/university-list/design?state=uttar-pradesh"
+            },
+            {
+              "name": "Tamil Nadu",
+              "link": "/university-list/design?state=tamil-nadu"
+            },
+            {
+              "name": "Rajasthan",
+              "link": "/university-list/design?state=rajasthan"
+            },
+            {
+              "name": "Andhra Pradesh",
+              "link": "/university-list/design?state=andhra-pradesh"
+            }
+          ],
+          "cities": [
+            {
+              "name": "Mumbai",
+              "link": "/university-list/design?city=mumbai"
+            },
+            {
+              "name": "Ahmedabad",
+              "link": "/university-list/design?city=ahmedabad"
+            },
+            {
+              "name": "Hyderabad",
+              "link": "/university-list/design?city=hyderabad"
+            },
+            {
+              "name": "Pune",
+              "link": "/university-list/design?city=pune"
+            },
+            {
+              "name": "Chennai",
+              "link": "/university-list/design?city=chennai"
+            }
+          ],
+          "courses": [
+            {
+              "name": "Bachelor of Design",
+              "link": "/study/course/bachelor-of-design"
+            },
+            {
+              "name": "B.Sc Game Designing and Development",
+              "link": "/study/course/b-sc-game-designing-and-development"
+            },
+            {
+              "name": "MBA in Interior Design",
+              "link": "/study/course/mba-in-interior-design"
+            },
+            {
+              "name": "Ceramic Design",
+              "link": "/study/course/ceramic-design"
+            },
+            {
+              "name": "BA in Graphic Design",
+              "link": "/study/course/ba-in-graphic-design"
+            },
+            {
+              "name": "Landscape Design",
+              "link": "/study/course/landscape-design"
+            }
+          ],
+          "exams": [
+            {
+              "name": "AIEED",
+              "link": "/study/exam/aieed-all-india-entrance-examination-for-design"
+            },
+            {
+              "name": "NIFT Entrance Exam",
+              "link": "/study/exam/nift-entrance-exam-national-institute-of-fashion-technology-entrance-examination"
+            },
+            {
+              "name": "IICD Entrance Test",
+              "link": "/study/exam/iicd-entrance-test-indian-institute-of-crafts-and-design-entrance-test"
+            },
+            {
+              "name": "CEED",
+              "link": "/study/exam/ceed-common-entrance-examination-for-design"
+            },
+            {
+              "name": "UPESDAT",
+              "link": "/study/exam/upesdat-upes-design-aptitude-test"
+            },
+            {
+              "name": "SMEAT",
+              "link": "/study/exam/smeat-srishti-manipal-entrance-and-aptitude-test"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Law",
+        "slug":"law",
+        "icon": "⚖️",
+        "link": "/university-list/law",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Maharashtra",
+              "link": "/university-list/law?state=maharashtra"
+            },
+            {
+              "name": "Delhi",
+              "link": "/university-list/law?state=delhi"
+            },
+            {
+              "name": "Uttar Pradesh",
+              "link": "/university-list/law?state=uttar-pradesh"
+            },
+            {
+              "name": "Tamil Nadu",
+              "link": "/university-list/law?state=tamil-nadu"
+            },
+            {
+              "name": "Rajasthan",
+              "link": "/university-list/law?state=rajasthan"
+            },
+            {
+              "name": "Andhra Pradesh",
+              "link": "/university-list/law?state=andhra-pradesh"
+            }
+          ],
+          "cities": [
+            {
+              "name": "Mumbai",
+              "link": "/university-list/law?city=mumbai"
+            },
+            {
+              "name": "Ahmedabad",
+              "link": "/university-list/law?city=ahmedabad"
+            },
+            {
+              "name": "Hyderabad",
+              "link": "/university-list/law?city=hyderabad"
+            },
+            {
+              "name": "Pune",
+              "link": "/university-list/law?city=pune"
+            },
+            {
+              "name": "Chennai",
+              "link": "/university-list/law?city=chennai"
+            }
+          ],
+          "courses": [
+            {
+              "name": "Corporate Law",
+              "link": "/study/course/corporate-law"
+            },
+            {
+              "name": "Environmental Law",
+              "link": "/study/course/environmental-law"
+            },
+            {
+              "name": "Maritime Law",
+              "link": "/study/course/maritime-law"
+            },
+            {
+              "name": "MBA in Business Law",
+              "link": "/study/course/mba-in-business-law"
+            },
+            {
+              "name": "Energy Law",
+              "link": "/study/course/energy-law"
+            },
+            {
+              "name": "Post Graduate Diploma in Corporate Law",
+              "link": "/study/course/post-graduate-diploma-in-corporate-law"
+            }
+          ],
+          "exams": [
+            {
+              "name": "CLAT",
+              "link": "/study/exam/clat-common-law-admission-test-1"
+            },
+            {
+              "name": "NMIMS-LAT",
+              "link": "/study/exam/nmims-lat-nmims-law-aptitude-test-1"
+            },
+            {
+              "name": "AP LAWCET",
+              "link": "/study/exam/ap-lawcet-andhra-pradesh-law-common-entrance-test-1"
+            },
+            {
+              "name": "AIL LET",
+              "link": "/study/exam/ail-let-army-institute-of-law-entrance-test-1"
+            },
+            {
+              "name": "AILET PG",
+              "link": "/study/exam/ailet-pg-all-india-law-entrance-test-for-llm-1"
+            },
+            {
+              "name": "AIBE",
+              "link": "/study/exam/aibe-all-india-bar-examination-1"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Media",
+        "slug":"media",
+        "icon": "🎥",
+        "link": "/university-list/media",
+        "colleges": {
+          "categories": [
+            {
+              "name": "Maharashtra",
+              "link": "/university-list/media?state=maharashtra"
+            },
+            {
+              "name": "Delhi",
+              "link": "/university-list/media?state=delhi"
+            },
+            {
+              "name": "Uttar Pradesh",
+              "link": "/university-list/media?state=uttar-pradesh"
+            },
+            {
+              "name": "Tamil Nadu",
+              "link": "/university-list/media?state=tamil-nadu"
+            },
+            {
+              "name": "Rajasthan",
+              "link": "/university-list/media?state=rajasthan"
+            },
+            {
+              "name": "Andhra Pradesh",
+              "link": "/university-list/media?state=andhra-pradesh"
+            }
+          ],
+          "cities": [
+            {
+              "name": "Mumbai",
+              "link": "/university-list/media?city=mumbai"
+            },
+            {
+              "name": "Ahmedabad",
+              "link": "/university-list/media?city=ahmedabad"
+            },
+            {
+              "name": "Hyderabad",
+              "link": "/university-list/media?city=hyderabad"
+            },
+            {
+              "name": "Pune",
+              "link": "/university-list/media?city=pune"
+            },
+            {
+              "name": "Chennai",
+              "link": "/university-list/media?city=chennai"
+            }
+          ],
+          "courses": [
+            {
+              "name": "Fashion Communication",
+              "link": "/study/course/fashion-communication"
+            },
+            {
+              "name": "Fashion Illustration",
+              "link": "/study/course/fashion-illustration"
+            },
+            {
+              "name": "Diploma in Broadcast Journalism",
+              "link": "/study/course/diploma-in-broadcast-journalism"
+            },
+            {
+              "name": "Diploma in Journalism and Mass Communication",
+              "link": "/study/course/diploma-in-journalism-and-mass-communication"
+            },
+            {
+              "name": "Bachelors in Media Animation & Design",
+              "link": "/study/course/bachelors-in-media-animation-design"
+            },
+            {
+              "name": "Master of Arts in Convergent Journalism",
+              "link": "/study/course/master-of-arts-in-convergent-journalism"
+            }
+          ],
+          "exams": [
+            {
+              "name": "JET Exam",
+              "link": "/study/exam/jet-exam-joint-entrance-test"
+            },
+            {
+              "name": "IIMC Entrance Exam",
+              "link": "/study/exam/iimc-entrance-exam-indian-institute-of-mass-communication-entrance-examination"
+            },
+            {
+              "name": "ACJ Entrance Exam",
+              "link": "/study/exam/acj-entrance-exam-asian-college-of-journalism-entrance-examination"
+            },
+            {
+              "name": "GMCET",
+              "link": "/study/exam/gmcet-global-media-common-entrance-test"
+            }
+          ]
+        }
+      }
+    ]
+  }
