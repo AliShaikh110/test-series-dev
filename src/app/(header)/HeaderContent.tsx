@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { 
-  Menu, 
-  ChevronDown, 
+import {
+  Menu,
+  ChevronDown,
   User,
   UserPlus,
   Building2,
@@ -13,7 +13,7 @@ import {
   BookMarked,
   Shield,
   ArrowRight,
-  X
+  X,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -26,43 +26,70 @@ const examCategories = [
   {
     title: "SSC & Govt",
     icon: Building2,
-    links: ["SSC CGL", "SSC CHSL", "SSC GD", "SSC CPO", "SSC MTS", "View all SSC →"]
+    links: [
+      "SSC CGL",
+      "SSC CHSL",
+      "SSC GD",
+      "SSC CPO",
+      "SSC MTS",
+      "View all SSC →",
+    ],
   },
   {
-    title: "Banking & Insurance", 
+    title: "Banking & Insurance",
     icon: Landmark,
-    links: ["SBI PO", "SBI Clerk", "IBPS PO", "IBPS Clerk", "RBI", "LIC", "View all Banking →"]
+    links: [
+      "SBI PO",
+      "SBI Clerk",
+      "IBPS PO",
+      "IBPS Clerk",
+      "RBI",
+      "LIC",
+      "View all Banking →",
+    ],
   },
   {
     title: "Railways",
     icon: Train,
-    links: ["RRB NTPC", "RRB Group D", "RRB JE", "RRB ALP", "View all Railways →"]
+    links: [
+      "RRB NTPC",
+      "RRB Group D",
+      "RRB JE",
+      "RRB ALP",
+      "View all Railways →",
+    ],
   },
   {
     title: "Teaching",
     icon: GraduationCap,
-    links: ["CTET", "State TET", "KVS", "NVS", "DSSSB", "View all Teaching →"]
+    links: ["CTET", "State TET", "KVS", "NVS", "DSSSB", "View all Teaching →"],
   },
   {
     title: "Civil Services & Judiciary",
     icon: Scale,
-    links: ["UPSC Prelims", "UPSC Mains", "State PCS", "Judiciary", "View all Civil →"]
+    links: [
+      "UPSC Prelims",
+      "UPSC Mains",
+      "State PCS",
+      "Judiciary",
+      "View all Civil →",
+    ],
   },
   {
     title: "MBA & Management",
     icon: Briefcase,
-    links: ["CAT", "XAT", "NMAT", "SNAP", "MAT", "View all MBA →"]
+    links: ["CAT", "XAT", "NMAT", "SNAP", "MAT", "View all MBA →"],
   },
   {
     title: "CUET & UG",
     icon: BookMarked,
-    links: ["CUET UG", "CUET PG", "BBA", "BCA", "View all CUET →"]
+    links: ["CUET UG", "CUET PG", "BBA", "BCA", "View all CUET →"],
   },
   {
     title: "Defence & Police",
     icon: Shield,
-    links: ["CDS", "AFCAT", "NDA", "Police Constable", "View all Defence →"]
-  }
+    links: ["CDS", "AFCAT", "NDA", "Police Constable", "View all Defence →"],
+  },
 ];
 
 // Simplified navigation with removed items
@@ -70,7 +97,7 @@ const navItems = [
   { label: "Exams", hasDropdown: true },
   { label: "Test Series", href: "/test-series" },
   { label: "Live Tests", href: "/live-tests" },
-  { label: "PYQs", href: "/pyqs" }
+  { label: "PYQs", href: "/pyqs" },
 ];
 
 export function HeaderContent() {
@@ -96,39 +123,42 @@ export function HeaderContent() {
       <motion.header
         className="sticky top-0 z-40 transition-all duration-300 w-full backdrop-blur-md"
         style={{
-          backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.95)' : 'var(--color-surface)',
-          borderBottom: `1px solid ${isScrolled ? 'rgba(209, 213, 219, 0.3)' : 'var(--color-border)'}`
+          backgroundColor: isScrolled
+            ? "rgba(255, 255, 255, 0.95)"
+            : "var(--color-surface)",
+          borderBottom: `1px solid ${
+            isScrolled ? "rgba(209, 213, 219, 0.3)" : "var(--color-border)"
+          }`,
         }}
         animate={{
-          boxShadow: isScrolled ? "0 4px 20px rgba(0, 0, 0, 0.08)" : "none"
+          boxShadow: isScrolled ? "0 4px 20px rgba(0, 0, 0, 0.08)" : "none",
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
-        <div 
-          className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4"
-        >
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           {/* Mobile Layout */}
           <div className="flex lg:hidden items-center justify-between w-full">
             {/* Logo */}
-            <motion.div 
+            <motion.div
               className="flex items-center flex-shrink-0"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
               <Link href="/" className="flex items-center gap-3">
-                <motion.div 
+                <motion.div
                   className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ 
-                    background: 'linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%)'
+                  style={{
+                    background:
+                      "linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%)",
                   }}
                   whileHover={{ rotate: 5 }}
                   transition={{ duration: 0.2 }}
                 >
                   <GraduationCap size={20} className="text-white" />
                 </motion.div>
-                <span 
+                <span
                   className="font-heading font-bold text-lg whitespace-nowrap"
-                  style={{ color: 'var(--color-text-900)' }}
+                  style={{ color: "var(--color-text-900)" }}
                 >
                   OnlyExams
                 </span>
@@ -137,38 +167,52 @@ export function HeaderContent() {
 
             {/* Mobile Right Section */}
             <div className="flex items-center gap-2 flex-shrink-0">
-
               <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild>
                   <motion.button
                     className="p-2 rounded-lg"
-                    style={{ backgroundColor: 'var(--color-bg)' }}
+                    style={{ backgroundColor: "var(--color-bg)" }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Menu size={24} style={{ color: 'var(--color-text-900)' }} />
+                    <Menu
+                      size={24}
+                      style={{ color: "var(--color-text-900)" }}
+                    />
                   </motion.button>
                 </SheetTrigger>
-                
+
                 <SheetContent side="right" className="w-full max-w-sm p-0">
-                  <div 
+                  <div
                     className="flex flex-col h-full"
-                    style={{ backgroundColor: 'var(--color-surface)' }}
+                    style={{ backgroundColor: "var(--color-surface)" }}
                   >
                     {/* Mobile Header */}
-                    <div className="flex items-center justify-between p-6 border-b" style={{ borderColor: 'var(--color-border)' }}>
+                    <div
+                      className="flex items-center justify-between p-6 border-b"
+                      style={{ borderColor: "var(--color-border)" }}
+                    >
                       <div className="flex items-center gap-3">
-                        <div 
+                        <div
                           className="w-8 h-8 rounded-xl flex items-center justify-center"
-                          style={{ background: 'linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%)' }}
+                          style={{
+                            background:
+                              "linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%)",
+                          }}
                         >
                           <GraduationCap size={18} className="text-white" />
                         </div>
-                        <span className="font-heading font-bold" style={{ color: 'var(--color-text-900)' }}>
+                        <span
+                          className="font-heading font-bold"
+                          style={{ color: "var(--color-text-900)" }}
+                        >
                           OnlyExams
                         </span>
                       </div>
                       <button onClick={() => setIsMobileMenuOpen(false)}>
-                        <X size={24} style={{ color: 'var(--color-text-500)' }} />
+                        <X
+                          size={24}
+                          style={{ color: "var(--color-text-500)" }}
+                        />
                       </button>
                     </div>
 
@@ -180,14 +224,14 @@ export function HeaderContent() {
                             key={index}
                             href={item.href || "#"}
                             className="flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-200"
-                            style={{ color: 'var(--color-text-900)' }}
+                            style={{ color: "var(--color-text-900)" }}
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.05 }}
                             onClick={() => setIsMobileMenuOpen(false)}
                             whileHover={{
-                              backgroundColor: 'var(--color-bg)',
-                              color: 'var(--color-primary-600)'
+                              backgroundColor: "var(--color-bg)",
+                              color: "var(--color-primary-600)",
                             }}
                           >
                             <span className="font-medium">{item.label}</span>
@@ -198,7 +242,10 @@ export function HeaderContent() {
                     </div>
 
                     {/* Mobile Auth & CTA */}
-                    <div className="p-6 border-t space-y-4" style={{ borderColor: 'var(--color-border)' }}>
+                    <div
+                      className="p-6 border-t space-y-4"
+                      style={{ borderColor: "var(--color-border)" }}
+                    >
                       <div className="flex gap-3">
                         <Button variant="outline" className="flex-1">
                           <User size={16} className="mr-2" />
@@ -209,14 +256,14 @@ export function HeaderContent() {
                           Sign Up
                         </Button>
                       </div>
-                      <ThemeBtn 
+                      <ThemeBtn
                         variant="sm"
                         text={
                           <>
-                          Start Free Test
-                          <ArrowRight size={16} className="ml-2" />
+                            Start Free Test
+                            <ArrowRight size={16} className="ml-2" />
                           </>
-                        } 
+                        }
                       />
                     </div>
                   </div>
@@ -228,25 +275,26 @@ export function HeaderContent() {
           {/* Desktop Layout */}
           <div className="hidden lg:flex items-center justify-between w-full">
             {/* Left Section - Logo */}
-            <motion.div 
+            <motion.div
               className="flex items-center flex-shrink-0 min-w-0"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
               <Link href="/" className="flex items-center gap-3">
-                <motion.div 
+                <motion.div
                   className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ 
-                    background: 'linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%)'
+                  style={{
+                    background:
+                      "linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%)",
                   }}
                   whileHover={{ rotate: 5 }}
                   transition={{ duration: 0.2 }}
                 >
                   <GraduationCap size={22} className="text-white" />
                 </motion.div>
-                <span 
+                <span
                   className="font-heading font-bold text-xl whitespace-nowrap"
-                  style={{ color: 'var(--color-text-900)' }}
+                  style={{ color: "var(--color-text-900)" }}
                 >
                   OnlyExams
                 </span>
@@ -260,19 +308,23 @@ export function HeaderContent() {
                   <div
                     key={index}
                     className="relative"
-                    onMouseEnter={() => item.hasDropdown && handleMegaMenuToggle(true)}
-                    onMouseLeave={() => item.hasDropdown && handleMegaMenuToggle(false)}
+                    onMouseEnter={() =>
+                      item.hasDropdown && handleMegaMenuToggle(true)
+                    }
+                    onMouseLeave={() =>
+                      item.hasDropdown && handleMegaMenuToggle(false)
+                    }
                   >
                     <motion.a
                       href={item.href || "#"}
                       className="flex items-center gap-1 font-medium transition-colors duration-200 py-2 px-1 whitespace-nowrap"
-                      style={{ 
-                        color: 'var(--color-text-700)',
-                        fontSize: 'var(--fs-body)'
+                      style={{
+                        color: "var(--color-text-700)",
+                        fontSize: "var(--fs-body)",
                       }}
-                      whileHover={{ 
-                        color: 'var(--color-primary-600)',
-                        scale: 1.05 
+                      whileHover={{
+                        color: "var(--color-primary-600)",
+                        scale: 1.05,
                       }}
                       transition={{ duration: 0.2 }}
                     >
@@ -293,29 +345,28 @@ export function HeaderContent() {
 
             {/* Right Section - Utilities */}
             <div className="flex items-center gap-3 flex-shrink-0 min-w-0">
-
               {/* Auth Links */}
               <div className="hidden lg:flex items-center gap-1">
                 <motion.a
                   href="#"
                   className="flex items-center gap-1 px-3 py-2 rounded-lg transition-colors duration-200"
-                  style={{ color: 'var(--color-text-700)' }}
-                  whileHover={{ 
-                    color: 'var(--color-primary-600)',
-                    backgroundColor: 'var(--color-bg)'
+                  style={{ color: "var(--color-text-700)" }}
+                  whileHover={{
+                    color: "var(--color-primary-600)",
+                    backgroundColor: "var(--color-bg)",
                   }}
                 >
                   <User size={16} />
                   <span className="text-sm font-medium">Login</span>
                 </motion.a>
-                
+
                 <motion.a
                   href="#"
                   className="flex items-center gap-1 px-3 py-2 rounded-lg transition-colors duration-200"
-                  style={{ color: 'var(--color-text-700)' }}
-                  whileHover={{ 
-                    color: 'var(--color-primary-600)',
-                    backgroundColor: 'var(--color-bg)'
+                  style={{ color: "var(--color-text-700)" }}
+                  whileHover={{
+                    color: "var(--color-primary-600)",
+                    backgroundColor: "var(--color-bg)",
                   }}
                 >
                   <UserPlus size={16} />
@@ -329,14 +380,15 @@ export function HeaderContent() {
                 whileTap={{ scale: 0.95 }}
                 className="flex-shrink-0"
               >
-                <ThemeBtn text={
-                        <>
-                          Start Free Test
-                          <ArrowRight size={16} className="ml-2" />
-                        </>
-                      }
-                      variant="sm"
-                      />
+                <ThemeBtn
+                  text={
+                    <>
+                      Start Free Test
+                      <ArrowRight size={16} className="ml-2" />
+                    </>
+                  }
+                  variant="sm"
+                />
               </motion.div>
             </div>
           </div>
@@ -348,8 +400,8 @@ export function HeaderContent() {
             <motion.div
               className="absolute left-0 right-0 top-full bg-white shadow-2xl border-t z-50"
               style={{
-                borderColor: 'var(--color-border)',
-                backgroundColor: 'var(--color-surface)'
+                borderColor: "var(--color-border)",
+                backgroundColor: "var(--color-surface)",
               }}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -360,20 +412,20 @@ export function HeaderContent() {
             >
               <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-white">
                 <div className="mb-6">
-                  <h3 
+                  <h3
                     className="font-heading font-semibold text-xl mb-2"
-                    style={{ color: 'var(--color-text-900)' }}
+                    style={{ color: "var(--color-text-900)" }}
                   >
                     Browse Exam Categories
                   </h3>
-                  <p 
+                  <p
                     className="text-sm"
-                    style={{ color: 'var(--color-text-500)' }}
+                    style={{ color: "var(--color-text-500)" }}
                   >
                     Explore thousands of practice questions and mock tests
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {examCategories.map((category, catIndex) => (
                     <motion.div
@@ -384,32 +436,39 @@ export function HeaderContent() {
                       transition={{ delay: catIndex * 0.05 }}
                     >
                       <div className="flex items-center gap-3 mb-4 p-3 rounded-lg transition-colors duration-200 group-hover:bg-gray-50">
-                        <div 
+                        <div
                           className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                          style={{ backgroundColor: 'var(--color-primary-50)', color: 'var(--color-primary-600)' }}
+                          style={{
+                            backgroundColor: "var(--color-primary-50)",
+                            color: "var(--color-primary-600)",
+                          }}
                         >
                           <category.icon size={20} />
                         </div>
-                        <h4 
+                        <h4
                           className="font-heading font-semibold"
-                          style={{ color: 'var(--color-text-900)' }}
+                          style={{ color: "var(--color-text-900)" }}
                         >
                           {category.title}
                         </h4>
                       </div>
-                      
+
                       <div className="space-y-2 pl-3">
                         {category.links.map((link, linkIndex) => (
                           <motion.a
                             key={linkIndex}
                             href="#"
                             className="block text-sm hover:underline transition-colors duration-200 py-1"
-                            style={{ 
-                              color: linkIndex === category.links.length - 1 
-                                ? 'var(--color-primary-600)'
-                                : 'var(--color-text-600)'
+                            style={{
+                              color:
+                                linkIndex === category.links.length - 1
+                                  ? "var(--color-primary-600)"
+                                  : "var(--color-text-600)",
                             }}
-                            whileHover={{ x: 4, color: 'var(--color-primary-600)' }}
+                            whileHover={{
+                              x: 4,
+                              color: "var(--color-primary-600)",
+                            }}
                             transition={{ duration: 0.2 }}
                           >
                             {link}
@@ -420,13 +479,22 @@ export function HeaderContent() {
                   ))}
                 </div>
 
-                <div className="mt-8 pt-6 border-t" style={{ borderColor: 'var(--color-border)' }}>
+                <div
+                  className="mt-8 pt-6 border-t"
+                  style={{ borderColor: "var(--color-border)" }}
+                >
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-sm font-medium" style={{ color: 'var(--color-text-900)' }}>
+                      <p
+                        className="text-sm font-medium"
+                        style={{ color: "var(--color-text-900)" }}
+                      >
                         {`Can't find your exam?`}
                       </p>
-                      <p className="text-xs" style={{ color: 'var(--color-text-500)' }}>
+                      <p
+                        className="text-xs"
+                        style={{ color: "var(--color-text-500)" }}
+                      >
                         {`We're constantly adding new exams and study materials`}
                       </p>
                     </div>
