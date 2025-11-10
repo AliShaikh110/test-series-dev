@@ -2,12 +2,6 @@
 import { cn } from "@/lib/utils";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { motion } from "framer-motion";
-import {
-  BellIcon,
-  BoxIcon,
-  DotFilledIcon,
-  SunIcon,
-} from "@radix-ui/react-icons";
 import Image from "next/image";
 import {
   Award,
@@ -19,16 +13,18 @@ import {
 
 export function BentoGridThirdDemo() {
   return (
-    <>
-      <div className="  py-16 px-4 sm:py-22  flex   flex-col  gap-y-4 mb-6">
-        <h3 className=" text-4xl font-bold tracking-tight bg-clip-text text-transparent  bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white pb-1  line-clamp-none md:text-4xl lg:text-5xl font-sans  relative z-20   my-4">
+    <div className="max-w-6xl mx-auto my-24">
+      <div className="  py-16 px-4 sm:py-10 flex   flex-col  gap-y-4">
+        <h3 className=" text-4xl font-bold tracking-tight bg-clip-text text-transparent  bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white pb-1  line-clamp-none md:text-4xl lg:text-5xl font-sans  relative z-20 text-center">
           Master any subject and get job opportunity
         </h3>
-        <p className="max-w-3xl text-lg font-medium text-gray-500">
-          Whether you're a complete beginner or advance ready to get job
+        <div className="flex justify-center">
+          <p className="max-w-3xl text-lg font-medium text-gray-500 text-center">
+            {`Whether you're a complete beginner or advance ready to get job
           opportunity from multiple MNC and beyond, Only education will help
-          yall.
-        </p>
+          yall.`}
+          </p>
+        </div>
       </div>
       <BentoGrid className=" mx-auto md:auto-rows-[20rem]">
         {items.map((item, i) => (
@@ -42,7 +38,7 @@ export function BentoGridThirdDemo() {
           />
         ))}
       </BentoGrid>
-    </>
+    </div>
   );
 }
 
@@ -131,7 +127,7 @@ const SkeletonThree = () => {
     >
       <motion.div className="h-full w-full rounded-lg"></motion.div>
     </motion.div>
-    
+
   );
 };
 const SkeletonFour = () => {
@@ -212,7 +208,7 @@ const SkeletonFour = () => {
         <p className="text-sm font-bold">level 3</p>
       </motion.div>
     </motion.div>
-    
+
   );
 };
 const SkeletonFive = () => {
