@@ -1,8 +1,7 @@
-import React,{useEffect} from "react";
+import React from "react";
 import { getUserMeLoader } from "@/data/services/get-user-loader";
 import AccountLayout from "@/components/account-layout";
 import { cookies } from "next/headers";
-import axios from "axios";
 import { redirect } from "next/navigation";
 
 export default async function AccountPageLayout({
@@ -19,7 +18,7 @@ export default async function AccountPageLayout({
     return redirect("/sign-in");
   }
   const user = await getUserMeLoader();
-  if(!user){
+  if (!user) {
     redirect("/sign-in");
   }
 

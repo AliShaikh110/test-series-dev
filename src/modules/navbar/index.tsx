@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 "use client";
 import React, { useState } from "react";
 import {
@@ -13,41 +14,40 @@ import { Button } from "@/components/ui/button";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import { UserProfileButton } from "@/components/UserProfileButton";
 import { useAuth } from "@/hooks/auth-hook";
-import { getUserPicture } from "@/data/services/get-user-loader";
 
 // Define types for navItems and props
-type NavItem = {
-  name: string;
-  link: string;
-};
+// type NavItem = {
+//   name: string;
+//   link: string;
+// };
 
-interface FloatingNavProps {
-  navItems: NavItem[];
-  className?: string;
-}
+// interface FloatingNavProps {
+//   navItems: NavItem[];
+//   className?: string;
+// }
 
-export const FloatingNav = ({}) => {
+export const FloatingNav = ({ }) => {
   const { isAuthenticated, user } = useAuth();
 
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   const inOutExpo = cubicBezier(0.87, 0, 0.13, 1);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleMenu = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
-      let scrollValue = Math.floor(current * 100) / 2;
+      const scrollValue = Math.floor(current * 100) / 2;
       const previous = scrollYProgress.getPrevious();
 
       // Ensure previous is defined and a number
       if (typeof previous === "number") {
-        let direction = current - previous;
+        const direction = current - previous;
 
         scrollValue > 4 && setVisible(false); // hide nav on certain amount of scroll
         direction < 0 && setVisible(true);

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import AccountInfo from "../account-info";
 import { UserType } from "@/types/types";
@@ -28,7 +28,7 @@ type MyInformationProps = {
 };
 
 const ProfileEmail = ({ user }: MyInformationProps) => {
-  const [successState, setSuccessState] = React.useState(false);
+  const [, setSuccessState] = React.useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [strapiError, setStrapiError] = useState<string | null>(null);
   const clearState = () => {
@@ -39,7 +39,6 @@ const ProfileEmail = ({ user }: MyInformationProps) => {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
   } = useForm<IEmailInput>({
     resolver: zodResolver(updateEmailSchema),
     defaultValues: {
@@ -48,7 +47,7 @@ const ProfileEmail = ({ user }: MyInformationProps) => {
     },
   });
 
- 
+
 
   const onSubmit: SubmitHandler<IEmailInput> = async (data) => {
     setIsLoading(true); // Start loading

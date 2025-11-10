@@ -141,8 +141,8 @@ export default function StudySuggestions() {
 
             <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 mb-4">
               <p className="text-sm italic">
-                "Your performance shows strong conceptual understanding but needs improvement in application. Focus on
-                solving more complex problems in Mathematics."
+                {`"Your performance shows strong conceptual understanding but needs improvement in application. Focus on
+                solving more complex problems in Mathematics."`}
               </p>
               <p className="text-xs text-muted-foreground mt-2">— Dr. Sharma, JEE Expert</p>
             </div>

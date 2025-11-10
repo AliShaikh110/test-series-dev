@@ -82,7 +82,7 @@ export default function QuestionBreakdown() {
   const filteredQuestions =
     selectedDifficulty === "all" ? questions : questions.filter((q) => q.difficulty === selectedDifficulty)
 
-  const getDifficultyColor = (difficulty) => {
+  const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case "easy":
         return "text-emerald-500 bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200"
@@ -95,7 +95,7 @@ export default function QuestionBreakdown() {
     }
   }
 
-  const getStatusIcon = (status) => {
+  const getStatusIcon = (status: string) => {
     switch (status) {
       case "correct":
         return <CheckCircle className="h-4 w-4 text-emerald-500" />

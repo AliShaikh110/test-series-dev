@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from "axios";
 import { getOtpSession } from "./get-token";
 import { getAuthToken } from "./get-token";
@@ -21,7 +22,7 @@ export async function getUserMeLoader() {
     return { ok: false, data: null, error: error };
   }
 }
-export async function getUserPicture(userId:any) {
+export async function getUserPicture(userId: any) {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL;
   const authToken = await getAuthToken();
   if (!authToken) return { ok: false, data: null, error: null };
@@ -35,7 +36,7 @@ export async function getUserPicture(userId:any) {
     });
 
     const data = response.data;
-    if(!data[0].picture)
+    if (!data[0].picture)
       return { ok: true, data: null, error: null };
     return { ok: true, data: data[0].picture, error: null };
   } catch (error) {

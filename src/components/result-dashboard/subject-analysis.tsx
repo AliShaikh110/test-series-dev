@@ -130,7 +130,7 @@ export default function SubjectAnalysis() {
                     <Progress
                       value={topic.score}
                       className="h-1.5"
-                      indicatorClassName={topic.score < 70 ? "bg-amber-500" : ""}
+                    // indicatorClassName={topic.score < 70 ? "bg-amber-500" : ""}
                     />
                   </div>
                 ))}
@@ -149,7 +149,7 @@ export default function SubjectAnalysis() {
                     <Progress
                       value={topic.score}
                       className="h-1.5"
-                      indicatorClassName={topic.score < 70 ? "bg-amber-500" : ""}
+                    // indicatorClassName={topic.score < 70 ? "bg-amber-500" : ""}
                     />
                   </div>
                 ))}
@@ -168,7 +168,7 @@ export default function SubjectAnalysis() {
                     <Progress
                       value={topic.score}
                       className="h-1.5"
-                      indicatorClassName={topic.score < 70 ? "bg-amber-500" : ""}
+                    // indicatorClassName={topic.score < 70 ? "bg-amber-500" : ""}
                     />
                   </div>
                 ))}

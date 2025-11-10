@@ -9,7 +9,6 @@ import {
   Train,
   GraduationCap,
   Scale,
-  Briefcase,
   BookMarked,
   Shield,
   ArrowRight,
@@ -129,7 +128,7 @@ export function HeaderContent() {
         style={{
           // backgroundColor: "rgba(255, 255, 255, 0.95)",
           borderBottom: `1px solid ${"rgba(209, 213, 219, 0.3)"
-          }`,
+            }`,
         }}
         animate={{
           boxShadow: isScrolled ? "0 4px 20px rgba(0, 0, 0, 0.08)" : "none",

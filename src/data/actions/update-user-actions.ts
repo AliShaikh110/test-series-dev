@@ -1,8 +1,8 @@
-import { IEmailInput } from "@/modules/account/components/profile-email";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as zod from "zod";
 import { mutateData } from "../services/mutate-data";
 import { flattenAttributes } from "@/utils/utils";
-import { IPhoneInput } from "@/modules/account/components/profile-phone";
 import { getAuthToken } from "../services/get-token";
 import { getUserMeLoader } from "../services/get-user-loader";
 
@@ -13,7 +13,7 @@ export const updateEmailSchema = zod.object({
   }),
 });
 
-export async function updateEmailAction(prevState: any, data: IEmailInput) {
+export async function updateEmailAction(prevState: any, data: any) {
   const validateEmail = updateEmailSchema.safeParse({
     id: data.id,
     email: data.email,
@@ -59,7 +59,7 @@ export async function updateEmailAction(prevState: any, data: IEmailInput) {
 
 // below is sarfraj code
 
-export async function updatePasswordAction(prevState: any, data: string) {}
+export async function updatePasswordAction(prevState: any, data: string) { }
 
 export const updateNamesSchema = zod.object({
   id: zod.number(),
@@ -77,7 +77,7 @@ export const updatePhoneSchema = zod.object({
 });
 
 // Action function to update phone and handle state
-export async function updatePhoneAction(prevState: any, data: IPhoneInput) {
+export async function updatePhoneAction(prevState: any, data: any) {
   // Validate and parse the phone data
   const validatePhone = updatePhoneSchema.safeParse({
     id: data.id,
@@ -138,7 +138,7 @@ export async function createUserDetail(userId: any, payload: any) {
 
   try {
     const response = await fetch(
-       `https://admin.onlyeducation.co.in/api/user-details`,
+      `https://admin.onlyeducation.co.in/api/user-details`,
       {
         method: "POST",
         headers: {
@@ -181,7 +181,7 @@ export async function graduationData(userId: number, payload: any) {
         body: JSON.stringify({ data: payload }),
       }
     );
-  
+
     if (!response.ok) {
       const responseText = await response.text();
       console.error("API Error:", responseText);
@@ -438,7 +438,7 @@ export async function uploadSingleAction(formData: any) {
     const user = await getUserMeLoader();
     const authToken = await getAuthToken();
 
-    
+
     const userId = user.data.id;
     // Link the uploaded file to the user
     const userUpdateResponse = await fetch(`https://admin.onlyeducation.co.in/api/users/${userId}`, {

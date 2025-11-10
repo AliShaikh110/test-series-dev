@@ -1,6 +1,6 @@
 "use server";
 
-import { blogListQuery } from "@/app/data/quries/articles-query";
+// import { blogListQuery } from "@/app/data/quries/articles-query";
 import { fetchPaginatedList } from "@/utils/utils";
 import {
   getCourseListQuery,
@@ -10,7 +10,7 @@ import {
 } from "../quries/news-query";
 
 export async function getMoreArticleData(page: number) {
-  const { data, hasMore } = await fetchPaginatedList(blogListQuery, page);
+  const { data, hasMore } = await fetchPaginatedList("/api/articles?fields[0]=title&fields[1]=slug&fields[3]=description&populate[image][fields][0]=url&populate[image][fields][1]=alternativeText&populate[image][fields][2]=formats&populate[image][fields][3]=blurhash&fields[4]=publishedAt&populate[categories][fields][0]=name&sort[6]=publishedAt:desc", page);
   return { data, hasMore };
 }
 export async function getMoreNewsData(page: number) {
@@ -29,10 +29,10 @@ export async function getMoreExamsData(page: number, streamSlug: string) {
 }
 
 
-export async function getMoreUnivData(page:number,streamSlug:string){
+export async function getMoreUnivData(page: number, streamSlug: string) {
 
 
   const UniListQuery = getUniListQuery(streamSlug);
-  const {data,hasMore} = await fetchPaginatedList(UniListQuery,page);
-  return {data, hasMore};
+  const { data, hasMore } = await fetchPaginatedList(UniListQuery, page);
+  return { data, hasMore };
 }

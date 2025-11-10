@@ -63,7 +63,7 @@ export default function ScoreDisplay() {
 
         <div className="mt-6 bg-primary/10 rounded-lg p-4 border border-primary/20">
           <p className="text-sm font-medium text-center">
-            <span className="text-primary">Excellent!</span> You're in the top 5% of test takers
+            <span className="text-primary">Excellent!</span> {`You're in the top 5% of test takers`}
           </p>
         </div>
       </CardContent>

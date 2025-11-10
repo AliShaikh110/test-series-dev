@@ -15,7 +15,7 @@ interface Props {
   flag: boolean;
 }
 
-const Timer = ({ data,flag }: Props) => { 
+const Timer = ({ data, flag }: Props) => {
   const router = useRouter();
   const timeInSeconds = data * 60;
   const [showTimeUpModal, setShowTimeUpModal] = useState(false);
@@ -40,7 +40,7 @@ const Timer = ({ data,flag }: Props) => {
 
   const [timeLeft, setTimeLeft] = useState(initialTimeLeft);
 
- 
+
   if (timeLeft <= 0 || flag) {
     sessionStorage.clear();
   }
@@ -81,11 +81,11 @@ const Timer = ({ data,flag }: Props) => {
       </div>
 
       {/* Time's Up Modal */}
-      <AlertDialog open={showTimeUpModal} onOpenChange={() => {}}>
+      <AlertDialog open={showTimeUpModal} onOpenChange={() => { }}>
         <AlertDialogContent className="border border-red-200 dark:border-red-800">
           <AlertDialogHeader>
             <AlertDialogTitle className="text-red-600 dark:text-red-400 text-xl">
-              Time's Up!
+              {`Time's Up!`}
             </AlertDialogTitle>
             <AlertDialogDescription className="text-base">
               Your test time has expired. Please submit your test to see your

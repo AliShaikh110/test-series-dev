@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 "use client";
 
 import { z } from "zod";
@@ -7,7 +9,6 @@ import {
   Check,
   ChevronsUpDown,
   GraduationCap,
-  Router,
   School,
 } from "lucide-react";
 import {
@@ -66,50 +67,50 @@ const Step3Schema = z.object({
   twelfthSchool: z.string().min(1, "Please enter your 12th school name."),
   twelfthSpecialization: z.string().min(1, "Please enter your 12th specialization."),
 })
-.superRefine((data, ctx) => {
-  // Validate graduation fields only if hasGraduation is true
-  if (data.hasGraduation) {
-    if (!data.graduationCollege || data.graduationCollege.length === 0) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: "Please enter your graduation college/institute.",
-        path: ["graduationCollege"],
-      });
-    }
-    
-    if (!data.course || data.course.length === 0) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: "Please enter your course.",
-        path: ["course"],
-      });
-    }
-    
-    if (typeof data.graduationPercentage !== 'number' || 
-        data.graduationPercentage < 0 || 
-        data.graduationPercentage > 100) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: "Invalid percentage.",
-        path: ["graduationPercentage"],
-      });
-    }
-  }
+  .superRefine((data, ctx) => {
+    // Validate graduation fields only if hasGraduation is true
+    if (data.hasGraduation) {
+      if (!data.graduationCollege || data.graduationCollege.length === 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "Please enter your graduation college/institute.",
+          path: ["graduationCollege"],
+        });
+      }
 
-  // Validate 10th and 12th year difference
-  const { tenthYear, twelfthYear } = data;
-  const differenceInMonths =
-    (twelfthYear.getFullYear() - tenthYear.getFullYear()) * 12 +
-    (twelfthYear.getMonth() - tenthYear.getMonth());
-    
-  if (differenceInMonths < 12) {
-    ctx.addIssue({
-      code: z.ZodIssueCode.custom,
-      message: "There should be a minimum of 1-year difference between 10th and 12th passing years.",
-      path: ["twelfthYear"],
-    });
-  }
-});
+      if (!data.course || data.course.length === 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "Please enter your course.",
+          path: ["course"],
+        });
+      }
+
+      if (typeof data.graduationPercentage !== 'number' ||
+        data.graduationPercentage < 0 ||
+        data.graduationPercentage > 100) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "Invalid percentage.",
+          path: ["graduationPercentage"],
+        });
+      }
+    }
+
+    // Validate 10th and 12th year difference
+    const { tenthYear, twelfthYear } = data;
+    const differenceInMonths =
+      (twelfthYear.getFullYear() - tenthYear.getFullYear()) * 12 +
+      (twelfthYear.getMonth() - tenthYear.getMonth());
+
+    if (differenceInMonths < 12) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "There should be a minimum of 1-year difference between 10th and 12th passing years.",
+        path: ["twelfthYear"],
+      });
+    }
+  });
 
 export type Step3FormValues = z.infer<typeof Step3Schema>;
 
@@ -161,12 +162,12 @@ export function EducationalDetailsComp(userId: any) {
     }
   });
   const router = useRouter();
-    const userIdValue = userId.userId;
+  const userIdValue = userId.userId;
 
-  const  onSubmit = async(data: any)=> {
+  const onSubmit = async (data: any) => {
 
     const payload = {
-      data:{
+      data: {
         graduationInstitution: data.graduationCollege,
         courseDone: data.course,
         graduationPercentage: data.graduationPercentage,
@@ -177,15 +178,15 @@ export function EducationalDetailsComp(userId: any) {
         twelfthSchoolBoard: data.twelfthBoard,
         twelfthPassingYear: data.twelfthYear, // Fixed typo: "twefthPassingYear" -> "twelfthPassingYear"
         twelfthPercentage: data.twelfthPercentage,
-        twelfthSchoolName: data.twelfthSchool, 
+        twelfthSchoolName: data.twelfthSchool,
         users_permissions_user: {
           connect: [userIdValue]
         }, // Corrected: Use user ID directly
       },
     };
-  
+
     const response = await createUserDetail(userId, payload);
-    if(response.data){
+    if (response.data) {
       router.refresh();
     }
     // graduationData(userId,payload);
@@ -274,8 +275,8 @@ export function EducationalDetailsComp(userId: any) {
                           >
                             {tenthValue
                               ? tenthBoards?.data.find(
-                                  (item) => item.slug === tenthValue
-                                )?.fullForm
+                                (item) => item.slug === tenthValue
+                              )?.fullForm
                               : "Select Board"}
                             <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                           </Button>
@@ -472,8 +473,8 @@ export function EducationalDetailsComp(userId: any) {
                           >
                             {twelfthValue
                               ? courses2?.data.find(
-                                  (item) => item.slug === twelfthValue
-                                )?.fullForm
+                                (item) => item.slug === twelfthValue
+                              )?.fullForm
                               : "Select Board"}
                             <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                           </Button>
@@ -646,41 +647,41 @@ export function EducationalDetailsComp(userId: any) {
                   </FormItem>
                 )}
               />
-              </div>
-               {/* graduation */}
-               <div className="w-full">
-                    <FormField
-                      control={form.control}
-                      name="hasGraduation"
-                      render={({ field }) => (
-                        <FormItem className="flex flex-row items-center space-x-3 space-y-0 ">
-                          <FormControl>
-                            <Checkbox
-                              checked={field.value}
-                              onCheckedChange={field.onChange}
-                            />
-                          </FormControl>
-                          <FormLabel>I have completed graduation</FormLabel>
-                        </FormItem>
-                      )}
-                    />
+            </div>
+            {/* graduation */}
+            <div className="w-full">
+              <FormField
+                control={form.control}
+                name="hasGraduation"
+                render={({ field }) => (
+                  <FormItem className="flex flex-row items-center space-x-3 space-y-0 ">
+                    <FormControl>
+                      <Checkbox
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                    </FormControl>
+                    <FormLabel>I have completed graduation</FormLabel>
+                  </FormItem>
+                )}
+              />
 
-                  {form.watch("hasGraduation") && (
-                  <div className="space-y-8 p-6 bg-white rounded-lg shadow-lg">
-                    {/* Heading Section */}
-                    <div className="flex items-center space-x-3 border-b border-gray-200 pb-4">
-                      <div className="bg-blue-50 p-2 rounded-lg">
-                        <GraduationCap className="h-6 w-6 text-blue-600" />
-                      </div>
-                      <div>
-                        <h2 className="text-xl font-bold text-gray-800">
-                          Graduation Details
-                        </h2>
-                        <p className="text-sm text-gray-500">
-                          Enter your graduation information
-                        </p>
-                      </div>
+              {form.watch("hasGraduation") && (
+                <div className="space-y-8 p-6 bg-white rounded-lg shadow-lg">
+                  {/* Heading Section */}
+                  <div className="flex items-center space-x-3 border-b border-gray-200 pb-4">
+                    <div className="bg-blue-50 p-2 rounded-lg">
+                      <GraduationCap className="h-6 w-6 text-blue-600" />
                     </div>
+                    <div>
+                      <h2 className="text-xl font-bold text-gray-800">
+                        Graduation Details
+                      </h2>
+                      <p className="text-sm text-gray-500">
+                        Enter your graduation information
+                      </p>
+                    </div>
+                  </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
@@ -722,8 +723,8 @@ export function EducationalDetailsComp(userId: any) {
                                 >
                                   {courseValue
                                     ? courses1?.data?.find(
-                                        (item) => item.title === courseValue
-                                      )?.title
+                                      (item) => item.title === courseValue
+                                    )?.title
                                     : "Select Course"}
                                   <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                                 </Button>
@@ -818,13 +819,13 @@ export function EducationalDetailsComp(userId: any) {
                     )}
                   />
                 </div>
-                
+
               )}
-              </div>
-            </div> 
-              <div className="flex justify-end">
-                <Button type="submit" >Submit</Button>
-              </div>
+            </div>
+          </div>
+          <div className="flex justify-end">
+            <Button type="submit" >Submit</Button>
+          </div>
           {/* </div> */}
           {/* <div className="flex justify-end">
             <Button type="submit">Submit</Button>

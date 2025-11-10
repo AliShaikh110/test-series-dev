@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // types.ts
 
 export interface HeaderProps {
@@ -144,12 +145,12 @@ export interface ImageAttributes {
 }
 
 export interface CategoryAttributes {
-  data:{
-  id: number;
-  name: string;
-  slug: string;
-  createdAt: string;
-  updatedAt: string;
+  data: {
+    id: number;
+    name: string;
+    slug: string;
+    createdAt: string;
+    updatedAt: string;
   }[]
 }
 
@@ -163,12 +164,12 @@ export interface ArticleAttributes {
   categories: CategoryAttributes;
   recommendedArticle: string | null;
   createdAt: Date;
-  readingTime:string
+  readingTime: string
   createdBy: {
-    id:number;
-    firstname:string;
-    lastname:string
-    username:string
+    id: number;
+    firstname: string;
+    lastname: string
+    username: string
   };
   publishedAt: Date;
   ckeditor_content: string;
@@ -325,22 +326,15 @@ export interface NewsAttributes {
   recommendedArticle: string | null;
   createdAt: Date;
   createdBy: {
-    id:number;
-    firstname:string;
-    lastname:string
+    id: number;
+    firstname: string;
+    lastname: string
   };
-  publishedAt:Date;
-  ckeditor_content:string;
+  publishedAt: Date;
+  ckeditor_content: string;
 }
 
-interface MetaData {
-  pagination: {
-    page: number;
-    pageSize: number;
-    pageCount: number;
-    total: number;
-  };
-}
+
 
 export interface BlogListResponse {
   data: ArticleAttributes[];
@@ -421,7 +415,7 @@ export interface streams {
   slug: string;
   broucher: any;
   streamIcon: ImageAttributes;
-  
+
 }
 interface duration {
   id: number;
@@ -433,11 +427,7 @@ export interface indian_state {
   title: string;
   slug: string;
 }
-interface data {
-  id: number;
-  title: string;
-  slug: string;
-}
+
 interface exams {
   id: number;
   title: string;
@@ -452,41 +442,41 @@ export interface UniversityProfile {
   fees: string;
   avgPackage: string;
   description: string;
-  profileImage:ImageAttributes
+  profileImage: ImageAttributes
 }
-export interface UniRanking {
-  // data:{
-  //   id:number
-  //   ranking:{
-  //   id:number
-  //   rankingNumber:string
-  //   rankings:{
-  //     id:number
-  //     publisherName:string
-  //   }
-  // }[]
-  // }[]
-}
+// export interface UniRanking {
+//   // data:{
+//   //   id:number
+//   //   ranking:{
+//   //   id:number
+//   //   rankingNumber:string
+//   //   rankings:{
+//   //     id:number
+//   //     publisherName:string
+//   //   }
+//   // }[]
+//   // }[]
+// }
 
 export interface ranking {
   rankingYear: Date;
   id: number;
   rankingNumber: number;
   stream: { id: number; slug: string };
-  rankingPublisher: { id: number; slug: string;publisherImage:ImageAttributes  };
+  rankingPublisher: { id: number; slug: string; publisherImage: ImageAttributes };
 }
 export interface courseRanking {
   rankingYear: Date;
   id: number;
   rankingNumber: number;
   stream: { id: number; slug: string };
-  rankingPublisher: { id: number; slug: string;publisherImage:ImageAttributes  };
-  course:{
-   
-      id: number;
-     slug: string;
-    title:string
-   
+  rankingPublisher: { id: number; slug: string; publisherImage: ImageAttributes };
+  course: {
+
+    id: number;
+    slug: string;
+    title: string
+
   }
 }
 
@@ -494,19 +484,19 @@ export interface courseRanking {
 export interface University {
   title?: string;
   id: number;
-  city:{
-    title:string,
+  city: {
+    title: string,
   },
-  accreditation:string,
-  exams_accepted:[
+  accreditation: string,
+  exams_accepted: [
     {
-      id:number;
-      title:string;
+      id: number;
+      title: string;
     }
   ]
-  avg_package:string,
+  avg_package: string,
   slug: string;
-  fees:string,
+  fees: string,
   universityProfile: UniversityProfile;
   ownership?: ownership;
   indian_state?: indian_state;
@@ -518,44 +508,44 @@ export interface University {
   examinationDate: string;
   resultDate: string;
   duration: duration;
-  UniRank: UniRanking;
+  UniRank: any;
   fullForm?: string;
-  description?: String;
+  description?: string;
   courseFullForm?: string;
-  durationYear?: Number;
+  durationYear?: number;
   rankingStreams: ranking[];
   rankingCourses: courseRanking[];
   universities: University[];
   collegeCourseManager: collegeCourseManager[];
-  rankingNumber:string
-  rankingPublisher:string
-  rankingYear:Date
-  pubisherImg:string
-  exam_type:string;
-  exam_level:string;
-  conducting_body:string;
-  accepting_colleges:string;
-  total_applications:string;
-  highlights:{
-    id:number;
-    key:string;
-    value:string;
+  rankingNumber: string
+  rankingPublisher: string
+  rankingYear: Date
+  pubisherImg: string
+  exam_type: string;
+  exam_level: string;
+  conducting_body: string;
+  accepting_colleges: string;
+  total_applications: string;
+  highlights: {
+    id: number;
+    key: string;
+    value: string;
   }[]
-  sections:{
-    id:number;
-    title:string;
-    content:string;
+  sections: {
+    id: number;
+    title: string;
+    content: string;
   }[]
-  tabs:{
-    sections:{
-      id:number;
-      title:string;
-      content:string;
+  tabs: {
+    sections: {
+      id: number;
+      title: string;
+      content: string;
     }[]
   }[]
 
-  average_duration:string
-  average_fees:string
+  average_duration: string
+  average_fees: string
 }
 
 
@@ -577,9 +567,9 @@ export interface SearchParamsProps {
   query?: string;
   page?: number;
   rankingParam?: string;
- ownership?:string;
- state?:string;
- city?:string;
+  ownership?: string;
+  state?: string;
+  city?: string;
 }
 
 export interface searchParamUserId {
@@ -608,19 +598,19 @@ export interface UserType {
     last_otp_request: any | null;
     resend_attempts: number | null;
     otp_session: string | undefined;
-    gender:string |undefined|null
-    town:string |undefined|null
-    district:string |undefined|null
-    state:string |undefined|null
-    fullname:string;
+    gender: string | undefined | null
+    town: string | undefined | null
+    district: string | undefined | null
+    state: string | undefined | null
+    fullname: string;
     error:
-      | {
-          status: number;
-          name: string;
-          message: string;
-          details: object;
-        }
-      | unknown;
+    | {
+      status: number;
+      name: string;
+      message: string;
+      details: object;
+    }
+    | unknown;
   } | null;
   error: unknown;
 }
@@ -633,13 +623,13 @@ import {
 
 export interface IImageExtended
   extends Omit<
-      React.DetailedHTMLProps<
-        React.ImgHTMLAttributes<HTMLImageElement>,
-        HTMLImageElement
-      >,
-      "height" | "width" | "loading" | "ref" | "alt" | "src" | "srcSet"
+    React.DetailedHTMLProps<
+      React.ImgHTMLAttributes<HTMLImageElement>,
+      HTMLImageElement
     >,
-    React.RefAttributes<HTMLImageElement | null> {
+    "height" | "width" | "loading" | "ref" | "alt" | "src" | "srcSet"
+  >,
+  React.RefAttributes<HTMLImageElement | null> {
   src: string;
   alt: string;
   width?: number | `${number}` | undefined;
@@ -727,7 +717,7 @@ type collegeCourseManager = {
   id: number;
   eligibility?: string;
   applicationDate: {
-    id:number
+    id: number
     startDate: string;
     endDate: string;
   };
@@ -765,19 +755,19 @@ export interface SocialSeos {
 
 export interface Seo {
 
-   canonicalURL?: string;
-   keywords?: string;
-   metaTitle?: string;
-   metaDescription?: string;
-   metaImage?: SeoImage;
-   metaRobots?: string;
-   socialSeos?: SocialSeos;
- 
+  canonicalURL?: string;
+  keywords?: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  metaImage?: SeoImage;
+  metaRobots?: string;
+  socialSeos?: SocialSeos;
+
 }
-interface course{
-id:number;
-title:string;
-slug:string;
+interface course {
+  id: number;
+  title: string;
+  slug: string;
 }
 export interface courses {
   data: course[];

@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { getAuthToken } from "./get-token";
 
 
-export async function mutateData(userId?:number, payload?: any) {
+export async function mutateData(userId?: number, payload?: any) {
 
   const authToken = await getAuthToken();
 
@@ -17,7 +18,7 @@ export async function mutateData(userId?:number, payload?: any) {
       body: JSON.stringify({ ...payload }),
     });
     const data = await response.json();
-    
+
     return data;
   } catch (error) {
     console.log("error", error);

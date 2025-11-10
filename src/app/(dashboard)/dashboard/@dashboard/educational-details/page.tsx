@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // "use client";
 import { getUserMeLoader } from "@/data/services/get-user-loader";
 import { fetchCachedData } from "@/utils/utils";
@@ -7,7 +9,6 @@ import Twelfth from "@/components/twelfth-update";
 import { Tenth } from "@/components/tenth-update";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { getUserPicture } from "@/data/services/get-user-loader";
 import { EducationalDetailsComp } from "@/components/page";
 import { Camera, InfoIcon, Mail } from "lucide-react";
@@ -56,17 +57,8 @@ interface Graducation {
   courseDone: string;
   graduationPercentage: number;
 }
-interface GraduationProps {
-  graducation?: Graducation;
-}
 
-interface TwelfthProps {
-  twelfthProps?: twelfthProps;
-}
 
-interface TenthProps {
-  tenthProps?: tenthProps;
-}
 export interface EducationalDetailsProps {
   tenthProps?: tenthProps;
   twelfthProps?: twelfthProps;
@@ -76,12 +68,12 @@ const EducationalDetails = async () => {
 
 
   const user = await getUserMeLoader();
-  if(!user.data) return;
+  if (!user.data) return;
   const id = user.data.id;
   const userDetailsData = `/api/user-details?filters[users_permissions_user][id][$eq]=${id}`;
   const userDetails: resProp = await fetchCachedData(userDetailsData);
-  
- 
+
+
   const graducationQuery = `/api/user-details?filters[users_permissions_user][id][$eq]=${id}&fields[0]=graduationInstitution&fields[1]=graduationPercentage&fields[2]=courseDone`;
   const twelfthQuery = `/api/user-details?filters[users_permissions_user][id][$eq]=${id}&fields[0]=twelfthSpecialization&fields[1]=twelfthPercentage&fields[2]=twelfthPassingYear&fields[3]=twelfthSchoolBoard&fields[4]=twelfthSchoolName`;
   const tenthQuery = `/api/user-details?filters[users_permissions_user][id][$eq]=${id}&fields[0]=tenthSchoolBoard&fields[1]=tenthPassingYear&fields[2]=tenthSchoolName&fields[3]=tenthPercentage`;
@@ -91,7 +83,7 @@ const EducationalDetails = async () => {
     fetchCachedData(twelfthQuery),
     fetchCachedData(tenthQuery),
   ]);
-  
+
   const data = await getUserPicture(user.data?.id);
   let pictureURL = null;
   if (data.data) {
@@ -166,7 +158,7 @@ const EducationalDetails = async () => {
             ) : (
               // Show education details when user details exist
               <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 justify-between text-black">
-                {userDetails.data.map((user:any) => (
+                {userDetails.data.map((user: any) => (
                   <React.Fragment key={user?.id}>
                     <div className="border rounded-lg shadow-sm flex justify-between bg-card text-card-foreground sm:px-6 p-4">
                       <div>

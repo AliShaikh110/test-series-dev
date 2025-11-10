@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { authService } from "@/data/services/auth-service";
 
 export default function GoogleLoginButton() {
   const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
 
   const handleGoogleLogin = async () => {
     setIsLoading(true);

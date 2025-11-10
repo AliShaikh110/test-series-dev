@@ -1,25 +1,21 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import Timer from "./timer";
-import QuizProgress from "./progess-bar";
 import QuestionPanel from "./question-panel";
-import KeyboardShortcuts from "./keyboard-shortcut";
 import QuestionNavigator from "./question-navigatior";
-import QuestionGridModal from "./questiongrid-modal";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Fullscreen, X } from "lucide-react";
-import { Slottable } from "@radix-ui/react-slot";
-import { group } from "console";
+import { X } from "lucide-react";
 import {
   Drawer,
   DrawerTrigger,
   DrawerContent,
   DrawerClose,
-  DrawerTitle 
+  DrawerTitle
 } from "@/components/ui/drawer";
 import { Menu } from "lucide-react";
 
@@ -62,26 +58,25 @@ type AnswerType = {
   selectedOptionId?: number;
   textAnswer?: number;
   status: string;
-  subject_tag?: string; 
-  subject_id?: number; 
+  subject_tag?: string;
+  subject_id?: number;
 };
 
 export default function QuizInterface({ data }: QuizClientProps) {
   const [darkMode, setDarkMode] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<AnswerType[]>([]);
-  const [showQuestionGrid, setShowQuestionGrid] = useState(false);
+  const [, setShowQuestionGrid] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
-  const [flag,setFlag] = useState(false);
+  const [flag, setFlag] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const router = useRouter();
   const [showReEnterButton, setShowReEnterButton] = useState(false);
-  const [submit,setSubmit] = useState(false)
-  const [allData, setAllData] = useState<any[]>([])
-  const [subjectInfo,setSubjectInfo] = useState({
-    subjectIndex:0,
-    questionIndex1:0
+  const [submit, setSubmit] = useState(false)
+  const [, setAllData] = useState<any[]>([])
+  const [subjectInfo, setSubjectInfo] = useState({
+    subjectIndex: 0,
+    questionIndex1: 0
   })
   const [drawerOpen, setDrawerOpen] = useState(true);
 
@@ -117,7 +112,7 @@ export default function QuizInterface({ data }: QuizClientProps) {
 
       // Load saved answers
       const savedAnswers = sessionStorage.getItem(STORAGE_KEYS.ANSWERS);
-      
+
       if (savedAnswers) {
         try {
           const parsedAnswers = JSON.parse(savedAnswers) as AnswerType[];
@@ -142,7 +137,7 @@ export default function QuizInterface({ data }: QuizClientProps) {
       sessionStorage.setItem(STORAGE_KEYS.CURRENT_SUBJECT, JSON.stringify(subjectInfo.subjectIndex));
 
     }
-  }, [darkMode, currentQuestion, answers,subjectInfo, isInitialized]);
+  }, [darkMode, currentQuestion, answers, subjectInfo, isInitialized]);
   // Toggle dark mode
   useEffect(() => {
     if (darkMode) {
@@ -153,8 +148,6 @@ export default function QuizInterface({ data }: QuizClientProps) {
   }, [darkMode]);
 
   // Calculate progress percentage
-  const answeredCount = answers.length;
-  const progressPercentage = (answeredCount / data.questions.length) * 100;
 
   // Handle answer selection
   const handleAnswerSelect = ({
@@ -176,7 +169,7 @@ export default function QuizInterface({ data }: QuizClientProps) {
     // console.log(status, textAnswer, optionId, subject_tag, questionId, subject_id,textAnswer);
 
     const existingAnswerIndex = answers.findIndex(
-      (ans) => ans.questionId === questionId && ans.subject_id === subjectInfo.subjectIndex 
+      (ans) => ans.questionId === questionId && ans.subject_id === subjectInfo.subjectIndex
     );
 
     const answerPayload: AnswerType = {
@@ -184,10 +177,10 @@ export default function QuizInterface({ data }: QuizClientProps) {
       status,
       ...(subject_tag !== undefined && { subject_tag }),
       ...(subject_id !== undefined && { subject_id }),
-      ...(optionId !== undefined  && { selectedOptionId: optionId }),
+      ...(optionId !== undefined && { selectedOptionId: optionId }),
       ...(textAnswer !== undefined && { textAnswer }),
     };
-    
+
     const updatedAnswers = [...answers];
 
     const currentQuestionId = groupedData[subjectInfo.subjectIndex].questions[subjectInfo.questionIndex1].id
@@ -197,7 +190,7 @@ export default function QuizInterface({ data }: QuizClientProps) {
     // } else {
     //   updatedAnswers.push(answerPayload);
     // }
-  
+
     // setAnswers(updatedAnswers);
 
 
@@ -214,9 +207,9 @@ export default function QuizInterface({ data }: QuizClientProps) {
     }
 
   };
-  
+
   // Get question status
-  const getQuestionStatus = (index: number, subjectInfo: { subjectIndex: number; questionIndex1: number }) => { 
+  const getQuestionStatus = (index: number, subjectInfo: { subjectIndex: number; questionIndex1: number }) => {
 
     const questionId = groupedData[subjectInfo.subjectIndex].questions[index].id
 
@@ -233,11 +226,11 @@ export default function QuizInterface({ data }: QuizClientProps) {
       }
     }
 
-    if ( isAnswered) {
+    if (isAnswered) {
       return "answered";
-    } else if(isFlagged){
+    } else if (isFlagged) {
       return "flagged";
-    } else{
+    } else {
       return "unanswered";
     }
   };
@@ -252,37 +245,38 @@ export default function QuizInterface({ data }: QuizClientProps) {
   };
 
   // ✅ Setup listeners
-    useEffect(() => {
+  useEffect(() => {
 
-    if(submit === false){
-    
+    if (submit === false) {
+
       enterFullscreen();
     }
 
-      const onFullscreenChange = () => {
+    const onFullscreenChange = () => {
       const isInFullscreen = !!document.fullscreenElement;
-    if(submit === false){
+      if (submit === false) {
 
         if (!isInFullscreen && isSubmitted === false) {
           alert("You must stay in fullscreen mode during the exam.");
           setShowReEnterButton(true);
         }
-      }}
+      }
+    }
 
-      const onFullscreenError = (e: Event) => {
-        console.error("Fullscreen error occurred", e);
-      };
+    const onFullscreenError = (e: Event) => {
+      console.error("Fullscreen error occurred", e);
+    };
 
-      document.addEventListener("fullscreenchange", onFullscreenChange);
-      document.addEventListener("fullscreenerror", onFullscreenError);
+    document.addEventListener("fullscreenchange", onFullscreenChange);
+    document.addEventListener("fullscreenerror", onFullscreenError);
 
-      return () => {
-        document.removeEventListener("fullscreenchange", onFullscreenChange);
-        document.removeEventListener("fullscreenerror", onFullscreenError);  
-      };
-    }, [isSubmitted]);
-    
-    console.log(drawerOpen)
+    return () => {
+      document.removeEventListener("fullscreenchange", onFullscreenChange);
+      document.removeEventListener("fullscreenerror", onFullscreenError);
+    };
+  }, [isSubmitted]);
+
+  console.log(drawerOpen)
 
   return (
     <div
@@ -328,99 +322,99 @@ export default function QuizInterface({ data }: QuizClientProps) {
           </Button>
         </div>
       </header>
-  
+
       {/* Main content (fills remaining height) */}
       <div className={`flex-1 grid overflow-hidden max-w-screen-2xl mx-auto w-full ${drawerOpen ? "grid-cols-1" : "grid-cols-1"}`}>
-      <div
-        className={`
+        <div
+          className={`
           transition-all duration-300 px-2 overflow-y-auto
           w-full
           ${drawerOpen ? "md:pr-[360px]" : "pr-10"}
         `}
->
+        >
 
-        <QuestionPanel
-          questions={data.questions}
-          currentQuestion={currentQuestion}
-          answers={answers.reduce((acc, curr) => {
-            if (curr.selectedOptionId !== undefined) {
-              acc[curr.questionId] = curr.selectedOptionId;
-            } else if (curr.textAnswer !== undefined) {
-              acc[curr.questionId] = curr.textAnswer;
-            }
-            return acc;
-          }, {} as Record<number, number>)}
-          setCurrentQuestion={setCurrentQuestion}
-          handleAnswerSelect={handleAnswerSelect}
-          setFlag={setFlag}
-          getQuestionStatus={getQuestionStatus}
-          setIsSubmitted={setIsSubmitted}
-          submit={submit}
-          setSubmit={setSubmit}
-          examData={{
-            positive: parseFloat(data.marking_positive),
-            negative: parseFloat(data.marking_negative),
-            paper_title:data.paper_title
-          }}
-          setAllData={setAllData}
-          setSubjectInfo={setSubjectInfo}
-          subjectInfo={subjectInfo}
-          groupedData={groupedData}
-          finalans={answers}
-        />
+          <QuestionPanel
+            questions={data.questions}
+            currentQuestion={currentQuestion}
+            answers={answers.reduce((acc, curr) => {
+              if (curr.selectedOptionId !== undefined) {
+                acc[curr.questionId] = curr.selectedOptionId;
+              } else if (curr.textAnswer !== undefined) {
+                acc[curr.questionId] = curr.textAnswer;
+              }
+              return acc;
+            }, {} as Record<number, number>)}
+            setCurrentQuestion={setCurrentQuestion}
+            handleAnswerSelect={handleAnswerSelect}
+            setFlag={setFlag}
+            getQuestionStatus={getQuestionStatus}
+            setIsSubmitted={setIsSubmitted}
+            submit={submit}
+            setSubmit={setSubmit}
+            examData={{
+              positive: parseFloat(data.marking_positive),
+              negative: parseFloat(data.marking_negative),
+              paper_title: data.paper_title
+            }}
+            setAllData={setAllData}
+            setSubjectInfo={setSubjectInfo}
+            subjectInfo={subjectInfo}
+            groupedData={groupedData}
+            finalans={answers}
+          />
         </div>
         <Drawer direction="right" open={drawerOpen} onOpenChange={setDrawerOpen} modal={false}>
           <DrawerTrigger asChild>
             <Button
-                variant="outline"
-                className="fixed top-1/2 right-0 z-50 transform -translate-y-1/2 rounded-l-full
+              variant="outline"
+              className="fixed top-1/2 right-0 z-50 transform -translate-y-1/2 rounded-l-full
                           bg-white hover:bg-blue-100 transition-all shadow-md hover:shadow-lg"
-              >
-                <Menu className="w-5 h-5 transition-transform group-hover:rotate-90 duration-300" />
+            >
+              <Menu className="w-5 h-5 transition-transform group-hover:rotate-90 duration-300" />
             </Button>
           </DrawerTrigger>
           <DrawerContent className="w-[90vw] sm:w-[360px] h-full
     ml-auto border-l bg-white
     data-[state=open]:backdrop-opacity-0 
     data-[state=open]:backdrop-blur-none
-    flex flex-col ">              
-              <div className="flex justify-between items-center px-4 py-2 border-b">
-                <DrawerTitle className="text-lg font-semibold">
-                  Section : {groupedData[subjectInfo.subjectIndex]?.subject_tag}
-                </DrawerTitle>
-                <DrawerClose asChild>
-                  <Button variant="ghost" size="icon">
-                    <X className="w-5 h-5" />
-                  </Button>
-                </DrawerClose>
-              </div>
-              <div className="p-4 overflow-y-auto max-h-screen">
-                <QuestionNavigator
-                  data={data}
-                  currentQuestion={currentQuestion}
-                  answers={answers.reduce((acc, curr) => {
-                    if (curr.selectedOptionId !== undefined) {
-                      acc[curr.questionId] = curr.selectedOptionId;
-                    }
-                    return acc;
-                  }, {} as Record<number, number>)}
-                  finalans={answers}
-                  getQuestionStatus={getQuestionStatus}
-                  setCurrentQuestion={setCurrentQuestion}
-                  setShowQuestionGrid={setShowQuestionGrid}
-                  subjectInfo={subjectInfo}
-                  setSubjectInfo={setSubjectInfo}
-                  groupedData={groupedData}
-                  closeDrawer={() => setDrawerOpen(false)}
-                />
-              </div>
+    flex flex-col ">
+            <div className="flex justify-between items-center px-4 py-2 border-b">
+              <DrawerTitle className="text-lg font-semibold">
+                Section : {groupedData[subjectInfo.subjectIndex]?.subject_tag}
+              </DrawerTitle>
+              <DrawerClose asChild>
+                <Button variant="ghost" size="icon">
+                  <X className="w-5 h-5" />
+                </Button>
+              </DrawerClose>
+            </div>
+            <div className="p-4 overflow-y-auto max-h-screen">
+              <QuestionNavigator
+                data={data}
+                currentQuestion={currentQuestion}
+                answers={answers.reduce((acc, curr) => {
+                  if (curr.selectedOptionId !== undefined) {
+                    acc[curr.questionId] = curr.selectedOptionId;
+                  }
+                  return acc;
+                }, {} as Record<number, number>)}
+                finalans={answers}
+                getQuestionStatus={getQuestionStatus}
+                setCurrentQuestion={setCurrentQuestion}
+                setShowQuestionGrid={setShowQuestionGrid}
+                subjectInfo={subjectInfo}
+                setSubjectInfo={setSubjectInfo}
+                groupedData={groupedData}
+                closeDrawer={() => setDrawerOpen(false)}
+              />
+            </div>
           </DrawerContent>
         </Drawer>
 
       </div>
     </div>
   );
-  
+
 
 
 }

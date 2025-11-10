@@ -1,7 +1,7 @@
 
 
 "use client";
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import AccountInfo from "../account-info";
 import { UserType } from "@/types/types";
@@ -30,9 +30,9 @@ type MyInformationProps = {
 };
 
 const ProfilePhone = ({ user }: MyInformationProps) => {
-  const [successState, setSuccessState] = useState(false);
+  const [, setSuccessState] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [strapiError, setStrapiError] = useState<string | null>(null);
+  const [strapiError] = useState<string | null>(null);
   const clearState = () => {
     setSuccessState(false);
   };

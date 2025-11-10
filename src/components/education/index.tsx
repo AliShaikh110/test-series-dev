@@ -78,7 +78,7 @@ const Graduation = ({ graducation, userId }: GraduationProps) => {
         <DialogHeader>
           <DialogTitle>Graduation Details</DialogTitle>
           <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
+            {`Make changes to your profile here. Click save when you're done.`}
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -88,18 +88,18 @@ const Graduation = ({ graducation, userId }: GraduationProps) => {
                 Institution Name
               </Label>
               <div className="col-span-3">
-              <Input
-                id="graduationInstitution"
-                {...register("graduationInstitution")}
-                className={
-                  errors.graduationInstitution ? "border-red-500 " : ""
-                }
-              />
-              {errors.graduationInstitution && (
-                <p className="text-red-500 text-xs font-medium">
-                  {errors.graduationInstitution.message}
-                </p>
-              )}
+                <Input
+                  id="graduationInstitution"
+                  {...register("graduationInstitution")}
+                  className={
+                    errors.graduationInstitution ? "border-red-500 " : ""
+                  }
+                />
+                {errors.graduationInstitution && (
+                  <p className="text-red-500 text-xs font-medium">
+                    {errors.graduationInstitution.message}
+                  </p>
+                )}
               </div>
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -107,16 +107,16 @@ const Graduation = ({ graducation, userId }: GraduationProps) => {
                 Course
               </Label>
               <div className="col-span-3">
-              <Input
-                id="courseDone"
-                {...register("courseDone")}
-                className={errors.courseDone ? "border-red-500 " : ""}
-              />
-              {errors.courseDone && (
-                <p className="text-red-500 text-xs font-medium">
-                  {errors.courseDone.message}
-                </p>
-              )}
+                <Input
+                  id="courseDone"
+                  {...register("courseDone")}
+                  className={errors.courseDone ? "border-red-500 " : ""}
+                />
+                {errors.courseDone && (
+                  <p className="text-red-500 text-xs font-medium">
+                    {errors.courseDone.message}
+                  </p>
+                )}
               </div>
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -125,24 +125,24 @@ const Graduation = ({ graducation, userId }: GraduationProps) => {
               </Label>
               <div className="col-span-3">
 
-              <Input
-                id="graduationPercentage"
-                type="number"
-                step="any"
-                {...register("graduationPercentage", {
-                  valueAsNumber: true,
-                })}
-                className={
-                  errors.graduationPercentage
-                    ? "border-red-500 "
-                    : ""
-                }
-              />
-              {errors.graduationPercentage && (
-                <p className="text-red-500 text-xs font-medium ">
-                  {errors.graduationPercentage.message}
-                </p>
-              )}
+                <Input
+                  id="graduationPercentage"
+                  type="number"
+                  step="any"
+                  {...register("graduationPercentage", {
+                    valueAsNumber: true,
+                  })}
+                  className={
+                    errors.graduationPercentage
+                      ? "border-red-500 "
+                      : ""
+                  }
+                />
+                {errors.graduationPercentage && (
+                  <p className="text-red-500 text-xs font-medium ">
+                    {errors.graduationPercentage.message}
+                  </p>
+                )}
               </div>
             </div>
           </div>

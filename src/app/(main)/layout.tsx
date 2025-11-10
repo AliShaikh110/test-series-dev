@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "../globals.css";
 import { FloatingNav } from "@/modules/navbar";
 import { Providers } from "../ThemeProvider";
@@ -16,12 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-        <main>
-          <Providers>
-            <FloatingNav />
-          </Providers>
-          {children}
-        </main>
-    
+    <main>
+      <Providers>
+        <FloatingNav />
+      </Providers>
+      {children}
+    </main>
+
   );
 }

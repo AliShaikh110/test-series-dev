@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export function validateStructuredData(data: any) {
   // Basic validation to ensure required fields are present
   const requiredFields = ['@context', '@type', 'name', 'description'];

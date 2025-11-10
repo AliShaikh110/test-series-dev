@@ -84,7 +84,7 @@ export function Tenth({ tenth, userId }: TenthProps) {
         <DialogHeader>
           <DialogTitle>Tenth Details</DialogTitle>
           <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
+            {`Make changes to your profile here. Click save when you're done.`}
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -94,18 +94,18 @@ export function Tenth({ tenth, userId }: TenthProps) {
                 Institution Name
               </Label>
               <div className="col-span-3">
-              <Input
-                id="tenthSchoolName"
-                {...register("tenthSchoolName")}
-                className={
-                  errors.tenthSchoolName ? "border-red-500 " : ""
-                }
-              />
-              {errors.tenthSchoolName && (
-                <p className="text-red-500 text-xs font-medium ">
-                  {errors.tenthSchoolName.message}
-                </p>
-              )}
+                <Input
+                  id="tenthSchoolName"
+                  {...register("tenthSchoolName")}
+                  className={
+                    errors.tenthSchoolName ? "border-red-500 " : ""
+                  }
+                />
+                {errors.tenthSchoolName && (
+                  <p className="text-red-500 text-xs font-medium ">
+                    {errors.tenthSchoolName.message}
+                  </p>
+                )}
               </div>
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -113,45 +113,45 @@ export function Tenth({ tenth, userId }: TenthProps) {
                 Board
               </Label>
               <div className="col-span-3">
-              <Input
-                id="tenthSchoolBoard"
-                {...register("tenthSchoolBoard")}
-                className={
-                  errors.tenthSchoolBoard ? "border-red-500 " : ""
-                }
-              />
-              {errors.tenthSchoolBoard && (
-                <p className="text-red-500 text-xs font-medium ">
-                  {errors.tenthSchoolBoard.message}
-                </p>
-              )}
+                <Input
+                  id="tenthSchoolBoard"
+                  {...register("tenthSchoolBoard")}
+                  className={
+                    errors.tenthSchoolBoard ? "border-red-500 " : ""
+                  }
+                />
+                {errors.tenthSchoolBoard && (
+                  <p className="text-red-500 text-xs font-medium ">
+                    {errors.tenthSchoolBoard.message}
+                  </p>
+                )}
               </div>
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="tenthPercentage" className="text-right col-span-1">
                 Percentage
               </Label>
-            <div className="col-span-3">
+              <div className="col-span-3">
 
-              <Input
-                id="tenthPercentage"
-                type="number"
-                step="any" 
-                {...register("tenthPercentage", {
-                  valueAsNumber: true, 
-                })}
-                className={
-                  errors.tenthPercentage
-                    ? "border-red-500 "
-                    : ""
-                }
-              />
+                <Input
+                  id="tenthPercentage"
+                  type="number"
+                  step="any"
+                  {...register("tenthPercentage", {
+                    valueAsNumber: true,
+                  })}
+                  className={
+                    errors.tenthPercentage
+                      ? "border-red-500 "
+                      : ""
+                  }
+                />
 
-              {errors.tenthPercentage && (
-                <p className="text-red-500 text-xs font-medium ">
-                  {errors.tenthPercentage.message}
-                </p>
-              )}
+                {errors.tenthPercentage && (
+                  <p className="text-red-500 text-xs font-medium ">
+                    {errors.tenthPercentage.message}
+                  </p>
+                )}
               </div>
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -174,9 +174,8 @@ export function Tenth({ tenth, userId }: TenthProps) {
                         }
                         dateFormat="yyyy/MM/dd"
                         placeholderText="Pick a date"
-                        className={`w-full p-2 pl-10 text-left font-normal outline-none ${
-                          errors.tenthPassingYear ? "border-red-500" : ""
-                        }`}
+                        className={`w-full p-2 pl-10 text-left font-normal outline-none ${errors.tenthPassingYear ? "border-red-500" : ""
+                          }`}
                       />
                     )}
                   />

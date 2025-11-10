@@ -121,8 +121,8 @@ export default function LeaderboardInsights() {
             <div className="p-4 rounded-lg bg-muted/50">
               <h4 className="font-medium mb-2">Performance Insight</h4>
               <p className="text-sm text-muted-foreground">
-                You're performing better than 96.8% of test takers. Focus on improving your Mathematics score to break
-                into the top 100 ranks.
+                {`You're performing better than 96.8% of test takers. Focus on improving your Mathematics score to break
+                into the top 100 ranks.`}
               </p>
             </div>
           </div>

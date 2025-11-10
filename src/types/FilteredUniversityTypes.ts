@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Common interfaces
 export interface ImageFormat {
   ext: string;
@@ -64,7 +65,7 @@ export interface UniversityData2 {
   ownership_name: string;
   fees: string;
   avg_package: string;
-  ranking_publisher_image_url:string;
+  ranking_publisher_image_url: string;
 }
 
 // Normalized data structure

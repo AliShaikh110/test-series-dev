@@ -1,11 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use server";
 import axios from "axios";
 import { cookies } from "next/headers";
 
-const COOKIE_NAME = "auth_token";
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-const CACHE_DURATION = 0; // 1 minute cache
 
 /**
  * Checks authentication status and returns user data if authenticated

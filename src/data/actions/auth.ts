@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use server";
 
 import { checkAuth } from "@/lib/auth";
 import { User } from "@/types/auth";
-import axios from "axios";
 import { cookies } from "next/headers";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;

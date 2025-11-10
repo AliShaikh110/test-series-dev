@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Basic interfaces for nested objects
 interface City {
     id: number;

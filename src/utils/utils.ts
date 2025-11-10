@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NormalizedUniversity, UniversityData1, UniversityData2 } from "@/types/FilteredUniversityTypes";
-import { FilterParams, Institution} from "@/types/types";
+import { FilterParams, Institution } from "@/types/types";
 import { z } from "zod";
 import slugify from 'slugify';
 
- // Import the slugify function
+// Import the slugify function
 
 
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
@@ -57,10 +58,10 @@ export function flattenAttributes(data: any): any {
   }
 
   // Initialize an object with an index signature for the flattened structure
-  let flattened: { [key: string]: any } = {};
+  const flattened: { [key: string]: any } = {};
 
   // Iterate over each key in the object
-  for (let key in data) {
+  for (const key in data) {
     // Skip inherited properties from the prototype chain
     if (!data.hasOwnProperty(key)) continue;
 
@@ -159,7 +160,7 @@ export async function fetchPaginatedUniList(path: string, currentPage: number) {
 
 
   return {
-    meta:data.meta,
+    meta: data.meta,
     data: data.data,
     hasMore: data.meta.pagination.page < data.meta.pagination.pageCount,
   };
@@ -174,7 +175,7 @@ export async function fetchPaginatedList(path: string, currentPage: number) {
 
 
   return {
-    meta:data.meta,
+    meta: data.meta,
     data: data.data,
     hasMore: data.meta.pagination.page < data.meta.pagination.pageCount,
   };
@@ -287,7 +288,7 @@ export const buildUniversityListQuery = (
   if (ownershipsParam) {
     query += `&filters[ownership][slug][$eq]=${ownershipsParam}`;
   }
- 
+
   if (params.stream !== "all") {
     query += `&filters[streams][slug][$eq]=${params.stream}`;
   }
@@ -296,8 +297,8 @@ export const buildUniversityListQuery = (
 };
 
 
-export function universalAdapter(data:  UniversityData1[] | UniversityData2[] ): NormalizedUniversity[] {
-  const isFirstStructure = (item: UniversityData1 | UniversityData2): item is UniversityData1 => 
+export function universalAdapter(data: UniversityData1[] | UniversityData2[]): NormalizedUniversity[] {
+  const isFirstStructure = (item: UniversityData1 | UniversityData2): item is UniversityData1 =>
     'fullForm' in item;
 
   return data.map(item => {
@@ -322,8 +323,8 @@ export function universalAdapter(data:  UniversityData1[] | UniversityData2[] ):
           fees: item.universityProfile.fees,
           avgPackage: item.universityProfile.avgPackage
         },
-     
-       
+
+
       };
     } else {
       // Second data structure
@@ -346,11 +347,11 @@ export function universalAdapter(data:  UniversityData1[] | UniversityData2[] ):
           fees: item.fees,
           avgPackage: item.avg_package
         },
-        rankingNumber:item.ranking_number,
-        rankingPublisher:item.ranking_publisher,
-        rankingYear:item.ranking_year,
-        pubisherImg:item.ranking_publisher_image_url
-       
+        rankingNumber: item.ranking_number,
+        rankingPublisher: item.ranking_publisher,
+        rankingYear: item.ranking_year,
+        pubisherImg: item.ranking_publisher_image_url
+
       };
     }
   });
@@ -484,9 +485,9 @@ interface InputExamData {
   id: number;
   slug: string;
   highlights: ExamHighlight[];
-  universityys:{
-    data:{
-      id:number;
+  universityys: {
+    data: {
+      id: number;
     }[]
   }
 
@@ -501,9 +502,9 @@ interface OutputExamData {
   id: number;
   title: string;
   slug: string;
-  universityys:{
-    data:{
-      id:number;
+  universityys: {
+    data: {
+      id: number;
     }[]
   }
 }
@@ -521,7 +522,7 @@ export const transformExamData = (input: ExamDataForFilter): OutputData => {
       id: exam.id,
       title: examTitle,
       slug: exam.slug,
-      universityys:exam.universityys
+      universityys: exam.universityys
     };
   });
 

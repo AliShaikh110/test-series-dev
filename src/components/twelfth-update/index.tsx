@@ -1,5 +1,5 @@
 "use client";
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -67,7 +67,7 @@ const Twelfth = ({ twelfth, userId }: TwelfthProps) => {
 
   const onSubmit: SubmitHandler<ITwelfthInput> = async (data) => {
     setIsLoading(true);
-    
+
     const res = await updateTwelfthAction(userId, data);
     if (!res.success) {
       setStrapiError(res.strapiErrors);
@@ -94,7 +94,7 @@ const Twelfth = ({ twelfth, userId }: TwelfthProps) => {
         <DialogHeader>
           <DialogTitle>Twelfth</DialogTitle>
           <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
+            {`Make changes to your profile here. Click save when you're done.`}
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -187,9 +187,8 @@ const Twelfth = ({ twelfth, userId }: TwelfthProps) => {
                         }
                         dateFormat="yyyy/MM/dd"
                         placeholderText="Pick a date"
-                        className={`w-full p-2 pl-10 text-left font-normal outline-none ${
-                          errors.twelfthPassingYear ? "border-red-500" : ""
-                        }`}
+                        className={`w-full p-2 pl-10 text-left font-normal outline-none ${errors.twelfthPassingYear ? "border-red-500" : ""
+                          }`}
                       />
                     )}
                   />

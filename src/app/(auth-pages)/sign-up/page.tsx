@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 import React, { useEffect, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -28,7 +30,6 @@ import { cn } from "@/utils/cn";
 import { useAuth } from "@/hooks/auth-hook";
 import GoogleLoginButton from "@/components/google-login-button";
 import { educationData } from "@/app/json/sign-up-fields";
-import CitySelector from "@/components/cityselector";
 
 // Define validation schemas
 const signupSchema = z.object({
@@ -137,7 +138,7 @@ export default function SignUpForm() {
     if (!selectedLevel || !selectedYear) return [];
     // @ts-ignore
     const level = educationData.levels[selectedLevel];
-    let nextStepKey = level.nextSteps[selectedYear] || level.nextSteps.all;
+    const nextStepKey = level.nextSteps[selectedYear] || level.nextSteps.all;
     // @ts-ignore
     if (nextStepKey && educationData.courses[nextStepKey]) {
       // @ts-ignore
@@ -151,7 +152,7 @@ export default function SignUpForm() {
     if (!selectedLevel || !selectedYear || !selectedStream) return [];
     // @ts-ignore
     const level = educationData.levels[selectedLevel];
-    let nextStepKey = level.nextSteps[selectedYear] || level.nextSteps.all;
+    const nextStepKey = level.nextSteps[selectedYear] || level.nextSteps.all;
     // @ts-ignore
     if (nextStepKey && educationData.courses[nextStepKey][selectedStream]) {
       // @ts-ignore
@@ -451,7 +452,7 @@ export default function SignUpForm() {
             <div className="space-y-2 w-full relative flex flex-col">
               <Label>City</Label>
 
-              <Controller
+              {/* <Controller
                 name="city"
                 control={control}
                 rules={{ required: "City is required" }}
@@ -462,7 +463,7 @@ export default function SignUpForm() {
                     error={!!errors.city}
                   />
                 )}
-              />
+              /> */}
               {errors.city && (
                 <p className="text-sm text-red-500 ">{errors.city.message}</p>
               )}
@@ -560,7 +561,7 @@ export default function SignUpForm() {
           )}
 
           <Button
-            onClick={() => {}}
+            onClick={() => { }}
             type="submit"
             disabled={isLoading}
             className="w-full py-3 px-4 bg-orange-500 text-white rounded-lg font-medium hover:opacity-90 transition-all duration-300 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2 group"

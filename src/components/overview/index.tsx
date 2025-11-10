@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @next/next/no-img-element */
 import { CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent } from "@/components/ui/card";
@@ -25,10 +27,10 @@ const Overview = async ({ user, UserDetails }: userProp) => {
   const formatDate = (date: string) => {
     return date
       ? new Date(date).toLocaleDateString("en-GB", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        })
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      })
       : "Not specified";
   };
 
@@ -116,9 +118,8 @@ const Overview = async ({ user, UserDetails }: userProp) => {
                   {
                     icon: Home,
                     label: "Location",
-                    value: `${user.data?.town || "Town"}, ${
-                      user.data?.district || "District"
-                    }, ${user.data?.state || "State"}`,
+                    value: `${user.data?.town || "Town"}, ${user.data?.district || "District"
+                      }, ${user.data?.state || "State"}`,
                   },
                 ].map((item, index) => (
                   <div key={index}>
@@ -166,11 +167,10 @@ const Overview = async ({ user, UserDetails }: userProp) => {
                     <div className="flex items-center justify-between">
                       <span className="text-gray-600">{item.label}</span>
                       <span
-                        className={`${
-                          item.isPercentage
-                            ? "px-3 py-1 bg-green-100 text-green-800 rounded-full"
-                            : "text-gray-900"
-                        } font-medium`}
+                        className={`${item.isPercentage
+                          ? "px-3 py-1 bg-green-100 text-green-800 rounded-full"
+                          : "text-gray-900"
+                          } font-medium`}
                       >
                         {item.isPercentage && item.value
                           ? `${item.value}%`
@@ -225,11 +225,10 @@ const Overview = async ({ user, UserDetails }: userProp) => {
                     <div className="flex items-center justify-between">
                       <span className="text-gray-600">{item.label}</span>
                       <span
-                        className={`${
-                          item.isPercentage
-                            ? "px-3 py-1 bg-green-100 text-green-800 rounded-full"
-                            : "text-gray-900"
-                        } font-medium`}
+                        className={`${item.isPercentage
+                          ? "px-3 py-1 bg-green-100 text-green-800 rounded-full"
+                          : "text-gray-900"
+                          } font-medium`}
                       >
                         {item.isPercentage && item.value
                           ? `${item.value}%`
@@ -278,11 +277,10 @@ const Overview = async ({ user, UserDetails }: userProp) => {
                     <div className="flex items-center justify-between">
                       <span className="text-gray-600">{item.label}</span>
                       <span
-                        className={`${
-                          item.isPercentage
-                            ? "px-3 py-1 bg-green-100 text-green-800 rounded-full"
-                            : "text-gray-900"
-                        } font-medium`}
+                        className={`${item.isPercentage
+                          ? "px-3 py-1 bg-green-100 text-green-800 rounded-full"
+                          : "text-gray-900"
+                          } font-medium`}
                       >
                         {item.isPercentage && item.value
                           ? `${item.value}%`

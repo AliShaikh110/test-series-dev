@@ -2,7 +2,6 @@ import { Disclosure, DisclosurePanel } from "@headlessui/react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import useToggleState from "@/lib/use-toggle-state";
-import { useFormStatus } from "react-dom";
 import { cn } from "@/utils/cn";
 import { Badge } from "@/components/ui/badge";
 // import { BottomGradient } from "../register";
@@ -15,19 +14,17 @@ type AccountInfoProps = {
   errorMessage?: string;
   clearState: () => void;
   children?: React.ReactNode;
-  isLoading:boolean
-  disable:boolean
+  isLoading: boolean
+  disable: boolean
 };
 
 const AccountInfo = ({
   label,
   currentInfo,
   isSuccess,
-  isError,
   clearState,
   isLoading,
-  disable=false,
-  errorMessage = "An error occurred, please try again",
+  disable = false,
   children,
 }: AccountInfoProps) => {
   const { state, close, toggle } = useToggleState();

@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { fetchData } from "@/utils/utils";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const TenthCard = (userId: any) => {
   const [metric, setMetric] = useState({
     tenthBoadName: "",
@@ -14,18 +15,9 @@ const TenthCard = (userId: any) => {
     const fetchDataAsync = async () => {
       try {
         // Fetch boards
-        const url =
-          "https://admin.onlyeducation.co.in/api/tenth-boards?pagination[pageSize]=50";
-        const boardsResponse = await fetchData(url, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
 
-        const filteredData = boardsResponse.data.map((single: any) => ({
-          id: single.id,
-          title: single.title,
-        }));
+
+
 
         // Fetch metric details
         const url2 = `https://admin.onlyeducation.co.in/api/user-details?filters[users_permissions_user][id][$eq]=${userId.userId}&fields[0]=tenthSchoolBoard&fields[1]=tenthPassingYear&fields[2]=tenthSchoolName&fields[3]=tenthPercentage`;

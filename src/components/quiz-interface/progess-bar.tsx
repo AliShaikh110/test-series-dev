@@ -1,18 +1,16 @@
 // components/QuizProgress.tsx
 "use client";
 
-import { Progress } from "@/components/ui/progress";
 
 interface QuizProgressProps {
   answeredCount: number;
   totalQuestions: number;
 }
 
-export default function QuizProgress({ 
-  answeredCount, 
-  totalQuestions 
+export default function QuizProgress({
+  answeredCount,
+  totalQuestions
 }: QuizProgressProps) {
-  const progressPercentage = (answeredCount / totalQuestions) * 100;
 
   return (
     <div className="mb-6">

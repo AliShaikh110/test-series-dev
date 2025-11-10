@@ -1,15 +1,15 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import {
-  BookOpen,
   GraduationCap,
   LogOut,
   Settings,
   User,
   ChevronRight,
   Home,
-  Bell,
   Menu,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -201,10 +201,9 @@ const AccountNavLink = ({ href, route, children }: AccountNavLinkProps) => {
       className={`
         group rounded-xl transition-all duration-200 flex items-center px-4 py-3
         hover:scale-[1.02] hover:shadow-sm
-        ${
-          active
-            ? "bg-blue-600 text-white shadow-md hover:shadow-lg"
-            : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+        ${active
+          ? "bg-blue-600 text-white shadow-md hover:shadow-lg"
+          : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
         }
       `}
     >

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useEffect } from "react";
@@ -19,10 +20,10 @@ export default function ExamFullscreenGuard() {
         // Re-enter fullscreen (optional)
         const elem = document.documentElement;
         if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-          } else if ((elem as any).webkitRequestFullscreen) {
-            (elem as any).webkitRequestFullscreen(); // Safari
-          }
+          elem.requestFullscreen();
+        } else if ((elem as any).webkitRequestFullscreen) {
+          (elem as any).webkitRequestFullscreen(); // Safari
+        }
 
         // OR redirect them out of the exam
         // router.push("/");

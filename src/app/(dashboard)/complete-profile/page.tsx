@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -75,7 +76,7 @@ type OtpFormInput = z.infer<typeof otpSchema>;
 
 export default function CompleteProfileForm() {
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [strapiError, setStrapiError] = useState<string | null>(null);
+  const [, setStrapiError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
   const [otpSent, setOtpSent] = useState(false);
@@ -271,7 +272,7 @@ export default function CompleteProfileForm() {
     //@ts-ignore
     return nextStepKey && educationData.courses[nextStepKey]
       ? //@ts-ignore
-        Object.keys(educationData.courses[nextStepKey])
+      Object.keys(educationData.courses[nextStepKey])
       : [];
   };
 
@@ -472,11 +473,10 @@ function OtpForm({
             placeholder="Enter OTP"
             disabled={isLoading}
             {...registerOtp("otp")}
-            className={`w-full px-4 py-3 rounded-lg border ${
-              otpErrors.otp
-                ? "border-red-500 focus:ring-red-500"
-                : "border-gray-300 focus:ring-blue-500"
-            } focus:outline-none focus:ring-2 bg-white/50 backdrop-blur-sm`}
+            className={`w-full px-4 py-3 rounded-lg border ${otpErrors.otp
+              ? "border-red-500 focus:ring-red-500"
+              : "border-gray-300 focus:ring-blue-500"
+              } focus:outline-none focus:ring-2 bg-white/50 backdrop-blur-sm`}
           />
           {otpErrors.otp && (
             <motion.p
@@ -547,11 +547,10 @@ function PhoneForm({
             placeholder="Enter your phone Number"
             disabled={isLoading}
             {...registerPhone("phone")}
-            className={`w-full px-4 py-3 rounded-lg border ${
-              phoneErrors.phone
-                ? "border-red-500 focus:ring-red-500"
-                : "border-gray-300 focus:ring-blue-500"
-            } focus:outline-none focus:ring-2 bg-white/50 backdrop-blur-sm`}
+            className={`w-full px-4 py-3 rounded-lg border ${phoneErrors.phone
+              ? "border-red-500 focus:ring-red-500"
+              : "border-gray-300 focus:ring-blue-500"
+              } focus:outline-none focus:ring-2 bg-white/50 backdrop-blur-sm`}
           />
           {phoneErrors.phone && (
             <motion.p

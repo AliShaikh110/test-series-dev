@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 
 interface IPLocation {
@@ -10,14 +11,14 @@ interface IPLocation {
     latitude: number;
     longitude: number;
     postal: string;
-    error:any | null
+    error: any | null
 }
 
-interface LocationState {
-    data: IPLocation | null;
-    loading: boolean;
-    error: string | null;
-}
+// interface LocationState {
+//     data: IPLocation | null;
+//     loading: boolean;
+//     error: string | null;
+// }
 
 
 const getLocation = async () => {
@@ -25,16 +26,16 @@ const getLocation = async () => {
 
         // This single API call will automatically detect IP and return location
         const response = await fetch('https://ipapi.co/json/');
-        const data:IPLocation = await response.json();
+        const data: IPLocation = await response.json();
 
         if (data.error) {
-            throw new Error(data.error|| 'Failed to get location');
+            throw new Error(data.error || 'Failed to get location');
         }
 
-        return{
+        return {
             data: data,
-            loading:false,
-            error:null
+            loading: false,
+            error: null
         }
 
 
